@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "pnpm -F @tientor/tientor-engine dev"
+        "dev": "pnpm -F @tientor/tientor-engine dev",
+        "build": "pnpm -F @tientor/tientor-engine build"
     },
     "keywords": [],
     "author": "",

@@ -1,3 +1,7 @@
+import './assets/tailwind.css'
+import './assets/reset.css'
+import './assets/main.less'
+
 import {createApp} from 'vue'
 import {createPinia} from 'pinia'
 
