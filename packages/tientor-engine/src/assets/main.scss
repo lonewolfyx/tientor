@@ -1,0 +1,30 @@
+:root {
+    --root-font-size: 14px;
+    --root-line-height: 8px;
+    --header-height: 3.57rem;
+    font-size: var(--root-font-size);
+    line-height: 1.5714285714285714;
+}
+
+html {
+    direction: initial;
+    scrollbar-width: thin;
+    scrollbar-color: #eaeaea transparent;
+}
+
+body {
+    overflow-x: hidden;
+    color: rgba(0, 0, 0, 0.88);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    background: #ffffff;
+    -webkit-transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#app {
+    @apply relative overflow-hidden w-full h-screen;
+}
+
+.tientor-container {
+    @apply relative flex flex-col flex-1 m-0 p-0;
+}
