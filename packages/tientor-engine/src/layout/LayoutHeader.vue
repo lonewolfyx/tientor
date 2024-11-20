@@ -7,7 +7,16 @@
                 懒人一位
             </div>
         </div>
-        <div class="navbar-device">PC｜Mobile</div>
+        <div class="navbar-device">
+            <RadioGroup type="button" default-value="desktop" class="flex">
+                <Radio value="desktop">
+                    <SvgIcon name="desktop" className="w-4 h-4"/>
+                </Radio>
+                <Radio value="mobile">
+                    <SvgIcon name="mobile" className="w-4 h-4"/>
+                </Radio>
+            </RadioGroup>
+        </div>
         <div class="navbar-operation">
             <div class="avatar">
                 <span class="avatar-image">
@@ -23,6 +32,9 @@
 
 <script setup>
 import Logo from '@/assets/image/logo.svg';
+import '@arco-design/web-vue/es/radio/style/css.js'
+import {Radio, RadioGroup} from '@arco-design/web-vue'
+import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 
 defineOptions({
     name: 'LayoutHeader'
@@ -30,6 +42,14 @@ defineOptions({
 </script>
 
 <style scoped lang="scss">
+//:deep(.arco-radio-button) {
+//    @apply flex;
+//}
+//
+//:deep(.arco-radio-button-content) {
+//    @apply flex items-center;
+//}
+
 .tientor-header {
     @apply relative box-border bg-zinc-800 text-slate-100 w-full flex items-center justify-between px-4 p-1.5;
     height: var(--header-height);

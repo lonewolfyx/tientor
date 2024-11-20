@@ -11,6 +11,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@arco-design/web-vue": "^2.56.3",
+        "radash": "^12.1.0",
         "vue": "^3.5.12"
     }
 }

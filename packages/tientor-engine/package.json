@@ -9,8 +9,12 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@arco-design/web-vue": "^2.56.3",
+        "@tientor/tientor-widget": "workspace:^",
         "pinia": "^2.2.6",
+        "radash": "^12.1.0",
         "vue": "^3.5.12",
+        "vue-draggable-plus": "^0.6.0",
         "vue-router": "^4.4.5"
     },
     "devDependencies": {
@@ -19,6 +23,9 @@
         "postcss": "^8.4.49",
         "sass-embedded": "^1.81.0",
         "tailwindcss": "^3.4.15",
-        "vite": "^5.4.10"
+        "unplugin-auto-import": "^0.18.5",
+        "unplugin-vue-components": "^0.27.4",
+        "vite": "^5.4.10",
+        "vite-plugin-svg-icons": "^2.0.1"
     }
 }

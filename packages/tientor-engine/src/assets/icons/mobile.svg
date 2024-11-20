@@ -1,0 +1,5 @@
+<svg viewBox="0 0 48 48" fill="currentColor">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M38 2c1.105 0 2 .9 2 2v40c0 1.1-.895 2-2 2H10c-1.105 0-2-.9-2-2V4c0-1.1.895-2 2-2h28zm-2 4H12v36h24V6zM24 33a3 3 0 110 6 3 3 0 010-6zm3-22l.117.007A1 1 0 0128 12v2l-.007.117A1 1 0 0127 15h-6l-.117-.007A1 1 0 0120 14v-2l.007-.117A1 1 0 0121 11h6z"
+          fill="currentColor"/>
+</svg>

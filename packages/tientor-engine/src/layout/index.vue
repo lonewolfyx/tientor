@@ -18,5 +18,7 @@ import LayoutHeader from "@/layout/LayoutHeader.vue";
 </script>
 
 <style scoped>
-
+.tientor-body-container {
+    @apply flex h-full;
+}
 </style>
