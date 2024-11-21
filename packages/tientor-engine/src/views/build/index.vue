@@ -3,13 +3,16 @@
         <section class="tientor-sidebar">
             <Sidebar/>
         </section>
-        <section class="tientor-render"></section>
+        <section class="tientor-render">
+            <WidgetRender/>
+        </section>
         <section class="tientor-config"></section>
     </section>
 </template>
 
 <script setup>
 import Sidebar from "@/views/build/component/Sidebar/index.vue";
+import WidgetRender from "@/views/build/component/WidgetRender/index.vue";
 
 const {sss} = defineProps(['sss'])
 </script>
@@ -18,7 +21,7 @@ const {sss} = defineProps(['sss'])
 .tientor-workbench {
     @apply relative overflow-hidden w-full grid box-border;
     grid-template-columns: 1fr 3fr 1fr;
-    height: calc(100% - var(--header-height));
+    height: calc(100vh - var(--header-height));
 
     .tientor-sidebar,
     .tientor-config {
@@ -26,7 +29,7 @@ const {sss} = defineProps(['sss'])
     }
 
     .tientor-render {
-        @apply relative box-border ;
+        @apply relative box-border p-3;
     }
 
 }
