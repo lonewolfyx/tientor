@@ -8,14 +8,14 @@
             </div>
         </div>
         <div class="navbar-device">
-            <RadioGroup type="button" default-value="desktop" class="flex">
-                <Radio value="desktop">
+            <a-radio-group type="button" default-value="desktop" class="flex">
+                <a-radio value="desktop">
                     <SvgIcon name="desktop" className="w-4 h-4"/>
-                </Radio>
-                <Radio value="mobile">
+                </a-radio>
+                <a-radio value="mobile">
                     <SvgIcon name="mobile" className="w-4 h-4"/>
-                </Radio>
-            </RadioGroup>
+                </a-radio>
+            </a-radio-group>
         </div>
         <NavbarOperation/>
     </div>
@@ -23,8 +23,6 @@
 
 <script setup>
 import Logo from '@/assets/image/logo.svg';
-import '@arco-design/web-vue/es/radio/style/css.js'
-import {Radio, RadioGroup} from '@arco-design/web-vue'
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import NavbarOperation from "@/layout/components/NavbarOperation.vue";
 
