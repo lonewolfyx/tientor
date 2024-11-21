@@ -13,7 +13,8 @@ export default defineConfig({
         AutoImport({
             // resolvers: [ArcoResolver()],
             imports: [
-                'vue'
+                'vue',
+                'pinia'
             ],
             dts: 'auto-import/auto-imports.d.ts',
         }),

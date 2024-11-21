@@ -1,3 +1,4 @@
 export default {
-    name: '树形控件'
+    name: '树形控件',
+    icon: 'widget-tree'
 }

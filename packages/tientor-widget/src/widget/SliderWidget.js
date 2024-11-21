@@ -1,3 +1,4 @@
 export default {
-    name: '滑块'
+    name: '滑块',
+    icon: 'widget-slider'
 }

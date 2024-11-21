@@ -17,16 +17,7 @@
                 </Radio>
             </RadioGroup>
         </div>
-        <div class="navbar-operation">
-            <div class="avatar">
-                <span class="avatar-image">
-                    <img
-                        alt="avatar"
-                        src="https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_oYdVBf4PAimDIpbGcAzgiCJtENerAA8oCA8AwO.jpeg"/>
-                </span>
-
-            </div>
-        </div>
+        <NavbarOperation/>
     </div>
 </template>
 
@@ -35,6 +26,7 @@ import Logo from '@/assets/image/logo.svg';
 import '@arco-design/web-vue/es/radio/style/css.js'
 import {Radio, RadioGroup} from '@arco-design/web-vue'
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
+import NavbarOperation from "@/layout/components/NavbarOperation.vue";
 
 defineOptions({
     name: 'LayoutHeader'
@@ -51,8 +43,9 @@ defineOptions({
 //}
 
 .tientor-header {
-    @apply relative box-border bg-zinc-800 text-slate-100 w-full flex items-center justify-between px-4 p-1.5;
-    height: var(--header-height);
+    @apply relative box-border bg-zinc-800 text-slate-100 w-full grid items-center justify-between px-4 p-1.5;
+    //height: var(--header-height);
+    grid-template-columns: 1fr 3fr 1fr;
 
     .navbar-logo {
         @apply flex items-center;
@@ -66,20 +59,8 @@ defineOptions({
         }
     }
 
-    .navbar-operation {
-        @apply flex;
-
-        .avatar {
-            @apply relative inline-flex items-center box-border text-white align-middle whitespace-normal text-base w-8 h-8;
-
-            .avatar-image {
-                @apply inline-block overflow-hidden w-full h-full rounded-full shadow-lg;
-
-                img {
-                    @apply w-full h-full;
-                }
-            }
-        }
+    .navbar-device {
+        @apply flex justify-center;
     }
 }
 </style>

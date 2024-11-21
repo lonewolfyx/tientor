@@ -1,3 +1,4 @@
 export default {
-    name: '多选框'
+    name: '多选框',
+    icon: 'widget-checkbox'
 }
