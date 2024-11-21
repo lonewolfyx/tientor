@@ -60,10 +60,16 @@ export const useDesignerStore = defineStore('designer', () => {
         }
     }
 
+    // 清空组件
+    const clearWidget = () => {
+        formConfig.value.widgetList = []
+    }
+
     return {
         formConfig,
         widgetList,
         currentWidget,
+        clearWidget,
         addFormWidget,
         cloneWidgetItem
     }
