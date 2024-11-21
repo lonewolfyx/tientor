@@ -9,15 +9,16 @@
 </template>
 
 <script setup>
-import Sidebar from "@/components/Sidebar/index.vue";
+import Sidebar from "@/views/build/component/Sidebar/index.vue";
 
 const {sss} = defineProps(['sss'])
 </script>
 
 <style scoped lang="scss">
 .tientor-workbench {
-    @apply relative overflow-hidden w-full h-full grid box-border;
+    @apply relative overflow-hidden w-full grid box-border;
     grid-template-columns: 1fr 3fr 1fr;
+    height: calc(100% - var(--header-height));
 
     .tientor-sidebar,
     .tientor-config {

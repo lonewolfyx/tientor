@@ -1,1 +1,1 @@
-export {default as FormWidget} from './FormWidget';
+export {basicComponents} from './FormWidget';

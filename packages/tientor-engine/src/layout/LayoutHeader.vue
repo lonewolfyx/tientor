@@ -44,7 +44,7 @@ defineOptions({
 
 .tientor-header {
     @apply relative box-border bg-zinc-800 text-slate-100 w-full grid items-center justify-between px-4 p-1.5;
-    //height: var(--header-height);
+    height: var(--header-height);
     grid-template-columns: 1fr 3fr 1fr;
 
     .navbar-logo {
