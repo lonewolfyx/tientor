@@ -1,29 +1,35 @@
 <template>
+<!--    {{widgetList}}-->
     <VueDraggable
-        v-model="list2"
+        v-model="widgetList"
         :animation="150"
         group="people"
         ghostClass="ghost"
         class="render-wrapper"
     >
-        <div
-            v-for="item in list2"
-            :key="item.id"
-        >
-            {{ item.name }}
-        </div>
+        <template v-for="item in widgetList" :key="item.id">
+            <p>{{ item }}</p>
+        </template>
     </VueDraggable>
 
 </template>
 
 <script setup>
 import {VueDraggable} from "vue-draggable-plus";
+import {useDesignerStore} from "@/stores/designer.js";
 
 defineOptions({
     name: 'WidgetRender'
 })
 
-const list2 = ref({})
+const {widgetList} = toRefs(useDesignerStore())
+
+const list2 = ref([
+    {
+        "name": "Joao-2",
+        "id": "1-2"
+    }
+])
 </script>
 
 <style scoped lang="scss">

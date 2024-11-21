@@ -3,16 +3,16 @@
         <!--        <DividerHeader title="布局组件"/>-->
         <DividerHeader title="基础组件"/>
         <VueDraggable
-            v-model="basicComponents"
+            v-model="components"
             :animation="150"
             ghostClass="ghost"
             :group="{ name: 'people', pull: 'clone', put: false }"
-            :clone="clone"
+            :clone="cloneWidgetItem"
             :sort="false"
             class="grid grid-cols-2 gap-4"
         >
             <DraggableItem
-                v-for="(item,index) in basicComponents"
+                v-for="(item,index) in components"
                 :key="index"
                 :item="item"
             />
@@ -22,17 +22,20 @@
 
 <script setup>
 
-import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
-import {basicComponents} from "@tientor/tientor-widget";
 import {VueDraggable} from "vue-draggable-plus";
 import DividerHeader from "@/components/DividerHeader/index.vue";
+import {clone} from 'radash'
+import {basicComponents} from "@tientor/tientor-widget";
+import {useDesignerStore} from "@/stores/designer.js";
+import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
 
 defineOptions({
     name: 'Sidebar'
 });
 
-const clone = () => {
-}
+const components = ref(clone(basicComponents))
+
+const {formConfig, cloneWidgetItem} = useDesignerStore()
 </script>
 
 <style scoped lang="scss">

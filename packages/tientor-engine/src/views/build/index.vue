@@ -29,7 +29,7 @@ const {sss} = defineProps(['sss'])
     }
 
     .tientor-render {
-        @apply relative box-border p-3;
+        @apply relative box-border p-3 overflow-hidden;
     }
 
 }

@@ -20,7 +20,7 @@ import UploadWidget from "./widget/UploadWidget.js";
 import ColorWidget from "./widget/ColorWidget.js";
 import TransferWidget from "./widget/TransferWidget.js";
 
-export const basicComponents = {
+export const basicComponents = [
     // 输入框
     InputWidget,
     // 多行输入框
@@ -61,4 +61,4 @@ export const basicComponents = {
     ColorWidget,
     // 穿梭框
     TransferWidget
-};
+];
