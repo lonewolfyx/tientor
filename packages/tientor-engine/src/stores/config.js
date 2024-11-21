@@ -1,12 +1,46 @@
 export const useConfigStore = defineStore('config', () => {
-    const config = ref({})
+    const config = ref({
+        // ui组件库
+        ui: 'element',
+        // 设备，pc - web端，mobile - 移动端
+        device: 'pc',
+    })
 
-    const setConfig = (newConfig) => {
-        config.value = newConfig
+    // ui 组件名称
+    const ui = computed({
+        get() {
+            return config.value.ui;
+        },
+        set(value) {
+            config.value.ui = value;
+        }
+    })
+
+    // 设备
+    const device = computed({
+        get() {
+            return config.value.device;
+        },
+        set(value) {
+            config.value.device = value;
+        }
+    })
+
+    // 设置 ui 组件库
+    const settingUi = (name) => {
+        config.value.ui = name;
+    }
+
+    // 设置所在设备
+    const settingDevice = (name) => {
+        config.value.device = name;
     }
 
     return {
         config,
-        setConfig
+        ui,
+        device,
+        settingUi,
+        settingDevice
     }
 })

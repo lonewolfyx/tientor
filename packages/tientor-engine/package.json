@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@arco-design/web-vue": "^2.56.3",
+        "@tientor/tientor-component": "workspace:^",
         "@tientor/tientor-widget": "workspace:^",
         "pinia": "^2.2.6",
         "radash": "^12.1.0",
