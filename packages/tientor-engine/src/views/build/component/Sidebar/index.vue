@@ -2,7 +2,6 @@
     <div class="p-5">
         <!--        <DividerHeader title="布局组件"/>-->
         <DividerHeader title="基础组件"/>
-        <component is="TientorInput"/>
         <VueDraggable
             v-model="components"
             :animation="150"

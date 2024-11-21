@@ -1,5 +1,5 @@
 <template>
-<!--    {{widgetList}}-->
+    <!--    {{widgetList}}-->
     <VueDraggable
         v-model="widgetList"
         :animation="150"
@@ -9,6 +9,7 @@
     >
         <template v-for="item in widgetList" :key="item.id">
             <p>{{ item }}</p>
+            <component is="TientorInput"/>
         </template>
     </VueDraggable>
 
