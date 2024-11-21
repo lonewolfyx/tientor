@@ -1,0 +1,14 @@
+{
+    "name": "@tientor/tientor-component",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "vue": "^3.5.12"
+    }
+}
