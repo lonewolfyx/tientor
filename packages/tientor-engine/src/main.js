@@ -23,7 +23,6 @@ app.use(router)
 app.use(ArcoVue)
 
 const {ui} = useConfigStore()
-
 app.use(TientorVue, {
     ui
 })

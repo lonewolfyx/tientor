@@ -1,7 +1,7 @@
 export const useConfigStore = defineStore('config', () => {
     const config = ref({
         // ui组件库
-        ui: 'element',
+        ui: 'antv',
         // 设备，pc - web端，mobile - 移动端
         device: 'pc',
     })

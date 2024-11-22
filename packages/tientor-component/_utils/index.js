@@ -8,7 +8,6 @@ import {setGlobalConfig} from "./global-config.js";
 export const withInstall = (component) => {
     component.install = (app, options) => {
         const {name} = component;
-
         // 设置全局配置信息
         setGlobalConfig(app, options);
 

@@ -1,16 +1,19 @@
 <template>
     <!--    {{widgetList}}-->
+    <TientorForm></TientorForm>
+    <a-input v-model="queryForm.value"/>
+    <component is="TientorInput" v-bind="queryForm"/>
+    <!-- render-wrapper -->
     <VueDraggable
         v-model="widgetList"
         :animation="150"
         group="people"
         ghostClass="ghost"
-        class="render-wrapper"
     >
-        <template v-for="item in widgetList" :key="item.id">
-            <p>{{ item }}</p>
-            <component is="TientorInput"/>
-        </template>
+        <!--            <template v-for="item in widgetList" :key="item.id">-->
+        <!--                <p>{{ item }}</p>-->
+        <!--                <component is="TientorInput" v-bind="queryForm"/>-->
+        <!--            </template>-->
     </VueDraggable>
 
 </template>
@@ -25,6 +28,9 @@ defineOptions({
 
 const {widgetList} = toRefs(useDesignerStore())
 
+const queryForm = ref({
+    value: ''
+})
 const list2 = ref([
     {
         "name": "Joao-2",
