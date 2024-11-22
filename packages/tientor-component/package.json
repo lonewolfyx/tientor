@@ -1,13 +1,11 @@
 {
     "name": "@tientor/tientor-component",
-    "version": "1.0.0",
-    "description": "",
-    "main": "src/index.js",
+    "version": "1.0.1",
+    "private": true,
+    "main": "index.js",
     "type": "module",
-    "scripts": {},
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "世界上最靓的仔",
+    "license": "MIT",
     "dependencies": {
         "vue": "^3.5.12"
     }

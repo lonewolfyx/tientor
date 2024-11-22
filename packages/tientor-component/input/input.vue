@@ -4,9 +4,12 @@
 </template>
 
 <script setup>
+import {getUiFramework} from "../_utils/global-config.js";
+
 defineOptions({
     name: 'TientorInput'
 });
 
+getUiFramework()
 
 </script>

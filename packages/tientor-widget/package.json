@@ -1,12 +1,9 @@
 {
     "name": "@tientor/tientor-widget",
     "version": "1.0.0",
-    "description": "",
+    "private": true,
     "main": "src/index.js",
     "type": "module",
-    "scripts": {
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+    "author": "世界上最靓的仔",
+    "license": "MIT"
 }
