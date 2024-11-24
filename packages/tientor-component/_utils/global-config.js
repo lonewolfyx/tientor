@@ -1,4 +1,5 @@
 import {getCurrentInstance} from 'vue';
+import widgetMap from "../config/widgetMap.js";
 
 export const GLOBAL_CONFIG_NAME = '$tientor';
 export const GLOBAL_COMPONENT_NAME = '$tientorUILibrary'
@@ -21,7 +22,7 @@ export const setGlobalConfig = (app, options) => {
 // 获取当前的主题ui框架
 export const getUiFramework = () => {
     const instance = getCurrentInstance();
-    console.log(instance?.appContext.config.globalProperties[GLOBAL_COMPONENT_NAME])
+
     return instance?.appContext.config.globalProperties[GLOBAL_CONFIG_NAME]?.ui;
 }
 
@@ -30,6 +31,13 @@ export const getUiFramework = () => {
  */
 export const getUiComponents = (component) => {
     const instance = getCurrentInstance();
-    console.log(instance?.appContext.config.globalProperties[GLOBAL_COMPONENT_NAME]?.[component])
-    return instance?.appContext.config.globalProperties[GLOBAL_COMPONENT_NAME]?.[component];
+    const globalProperties = instance?.appContext.config.globalProperties;
+    const {ui} = globalProperties[GLOBAL_CONFIG_NAME];
+
+    console.log(globalProperties[GLOBAL_COMPONENT_NAME])
+
+
+    console.log('globalProperties', globalProperties, widgetMap[ui][component], component)
+    // return instance?.appContext.config.globalProperties[GLOBAL_COMPONENT_NAME]?.[component];
+    return globalProperties[GLOBAL_COMPONENT_NAME]?.[widgetMap[ui][component]];
 }

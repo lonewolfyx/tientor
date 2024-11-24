@@ -8,8 +8,8 @@ export const useDesignerStore = defineStore('designer', () => {
         widgetList: [{
             "id": "077939ac6c94419f9abfbb1621d824ae",
             "name": "输入框",
-            "icon": "widget-input",
-            "tag": "input",
+            "icon": "widget-password",
+            "tag": "password",
             "prop": {}
         }],
         currentWidget: {}
@@ -73,4 +73,6 @@ export const useDesignerStore = defineStore('designer', () => {
         addFormWidget,
         cloneWidgetItem
     }
+}, {
+    persist: true
 })

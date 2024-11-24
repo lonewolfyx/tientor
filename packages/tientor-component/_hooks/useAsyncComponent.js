@@ -1,8 +1,6 @@
-import {getUiComponents, getUiFramework} from "../_utils/global-config.js";
+import {getUiComponents} from "../_utils/global-config.js";
 
 export const useAsyncComponent = (componentName) => {
-    const ui = getUiFramework()
-
     const component = ref(null);
 
     onBeforeMount(async () => {

@@ -7,24 +7,15 @@
                 懒人一位
             </div>
         </div>
-        <div class="navbar-device">
-            <a-radio-group type="button" default-value="desktop" class="flex">
-                <a-radio value="desktop">
-                    <SvgIcon name="desktop" className="w-4 h-4"/>
-                </a-radio>
-                <a-radio value="mobile">
-                    <SvgIcon name="mobile" className="w-4 h-4"/>
-                </a-radio>
-            </a-radio-group>
-        </div>
+        <NavbarDevice/>
         <NavbarOperation/>
     </div>
 </template>
 
 <script setup>
 import Logo from '@/assets/image/logo.svg';
-import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import NavbarOperation from "@/layout/components/NavbarOperation.vue";
+import NavbarDevice from "@/layout/components/NavbarDevice.vue";
 
 defineOptions({
     name: 'LayoutHeader'
@@ -57,8 +48,5 @@ defineOptions({
         }
     }
 
-    .navbar-device {
-        @apply flex justify-center;
-    }
 }
 </style>

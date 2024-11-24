@@ -1,13 +1,30 @@
 <template>
-
+    <div class="navbar-device">
+        <a-radio-group type="button" class="flex" v-model="device">
+            <a-radio value="desktop">
+                <SvgIcon name="desktop" className="w-4 h-4"/>
+            </a-radio>
+            <a-radio value="mobile">
+                <SvgIcon name="mobile" className="w-4 h-4"/>
+            </a-radio>
+        </a-radio-group>
+    </div>
 </template>
 
 <script setup>
+import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
+import {useConfigStore} from "@/stores/config.js";
+
 defineOptions({
     name: 'NavbarDevice'
-})
+});
+
+const {device} = toRefs(useConfigStore());
+
 </script>
 
 <style scoped lang="scss">
-
+.navbar-device {
+    @apply flex justify-center;
+}
 </style>

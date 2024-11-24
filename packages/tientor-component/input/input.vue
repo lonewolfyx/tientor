@@ -7,10 +7,10 @@
 <script setup>
 import {useAsyncComponent} from "../_hooks/useAsyncComponent.js";
 
-const component = useAsyncComponent('Input');
+const component = useAsyncComponent('input');
 
 defineOptions({
     name: 'TientorInput'
 });
-
+console.log(useAttrs())
 </script>

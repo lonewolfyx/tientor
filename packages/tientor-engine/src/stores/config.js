@@ -2,8 +2,8 @@ export const useConfigStore = defineStore('config', () => {
     const config = ref({
         // ui组件库
         ui: 'antv',
-        // 设备，pc - web端，mobile - 移动端
-        device: 'pc',
+        // 设备，desktop - web端，mobile - 移动端
+        device: 'desktop',
     })
 
     // ui 组件名称
@@ -22,6 +22,7 @@ export const useConfigStore = defineStore('config', () => {
             return config.value.device;
         },
         set(value) {
+            console.log('改变了device', value)
             config.value.device = value;
         }
     })
@@ -33,6 +34,7 @@ export const useConfigStore = defineStore('config', () => {
 
     // 设置所在设备
     const settingDevice = (name) => {
+        console.log(name)
         config.value.device = name;
     }
 
@@ -43,4 +45,6 @@ export const useConfigStore = defineStore('config', () => {
         settingUi,
         settingDevice
     }
+}, {
+    persist: true
 })

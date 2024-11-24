@@ -1,5 +1,7 @@
 <template>
     <div class="p-5">
+        <DividerHeader title="Ui 组件库"/>
+        <UiDesign/>
         <!--        <DividerHeader title="布局组件"/>-->
         <DividerHeader title="基础组件"/>
         <VueDraggable
@@ -28,6 +30,7 @@ import {clone} from 'radash'
 import {basicComponents} from "@tientor/tientor-widget";
 import {useDesignerStore} from "@/stores/designer.js";
 import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
+import UiDesign from "@/components/UiDesign/index.vue";
 
 defineOptions({
     name: 'Sidebar'
