@@ -3,6 +3,7 @@
         <template v-for="item in 4" :key="item">
             <a-radio :value="item" style="margin: 0 !important;padding: 0!important;">
                 <template #radio="{ checked }">
+                    {{checked}}
                     <a-space
                         align="start"
                         class="radio-card"
