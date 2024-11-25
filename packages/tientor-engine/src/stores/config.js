@@ -12,6 +12,7 @@ export const useConfigStore = defineStore('config', () => {
             return config.value.ui;
         },
         set(value) {
+            console.log('新的ui框架', value)
             config.value.ui = value;
         }
     })

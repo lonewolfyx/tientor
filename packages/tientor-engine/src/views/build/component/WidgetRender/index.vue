@@ -1,8 +1,19 @@
 <template>
     <!--    {{widgetList}}-->
-    <TientorForm></TientorForm>
-    <a-input v-model="queryForm.value"/>
-    <component is="TientorInput" v-bind="queryForm"/>
+    <!--    <TientorForm>-->
+    <!--        <component is="TientorInput" v-bind="queryForm"/>-->
+    <!--    </TientorForm>-->
+    <!--    <a-input v-model="queryForm.value"/>-->
+    <!--    {{queryForm}}-->
+    <!--    <component is="TientorInput" v-bind="queryForm"/>-->
+    <component is="TientorForm">
+<!--        <component is="TientorFormItem">-->
+<!--            <component is="TientorInput" v-bind="queryForm"/>-->
+<!--        </component>-->
+<!--        <component is="TientorFormItem">-->
+<!--            <component is="TientorInput" v-bind="queryForm"/>-->
+<!--        </component>-->
+    </component>
     <!-- render-wrapper -->
     <VueDraggable
         v-model="widgetList"
@@ -10,10 +21,10 @@
         group="people"
         ghostClass="ghost"
     >
-        <!--            <template v-for="item in widgetList" :key="item.id">-->
-        <!--                <p>{{ item }}</p>-->
-        <!--                <component is="TientorInput" v-bind="queryForm"/>-->
-        <!--            </template>-->
+<!--        <template v-for="item in widgetList" :key="item.id">-->
+<!--            <p>{{ item }}</p>-->
+<!--            <component is="TientorInput" v-bind="queryForm"/>-->
+<!--        </template>-->
     </VueDraggable>
 
 </template>

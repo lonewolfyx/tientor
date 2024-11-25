@@ -7,11 +7,13 @@ import * as Antd from 'ant-design-vue';
 import * as ElementPlus from 'element-plus';
 
 import {GLOBAL_COMPONENT_NAME} from "./_utils/global-config.js";
+import FormItem from "./form-item/index.js";
 
 // 后续更多的脚本在此添加并且曝光
 const components = {
     Form,
     Input,
+    FormItem,
 };
 
 

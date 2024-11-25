@@ -1,9 +1,17 @@
 export default {
     'element': {
-        input: 'ElInput'
+        input: 'ElInput',
+        form: 'ElForm',
+        formItem: 'ElFormItem'
     },
-    'arco': {},
+    'arco': {
+        input: 'Input',
+        form: 'Form',
+        formItem: 'FormItem'
+    },
     'antv': {
-        input: 'Input'
+        input: 'Input',
+        form: 'Form',
+        formItem: 'FormItem'
     }
 }

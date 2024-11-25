@@ -1,7 +1,6 @@
 <template>
     这是第一个组件
-    {{ $attrs }}
-    <component :is="component" v-bind="$attrs"/>
+    <component :is="component" v-bind="$attrs" v-model="$attrs.value"/>
 </template>
 
 <script setup>

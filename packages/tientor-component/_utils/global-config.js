@@ -37,7 +37,7 @@ export const getUiComponents = (component) => {
     console.log(globalProperties[GLOBAL_COMPONENT_NAME])
 
 
-    console.log('globalProperties', globalProperties, widgetMap[ui][component], component)
+    console.log('globalProperties', globalProperties, ui,widgetMap[ui][component], component)
     // return instance?.appContext.config.globalProperties[GLOBAL_COMPONENT_NAME]?.[component];
     return globalProperties[GLOBAL_COMPONENT_NAME]?.[widgetMap[ui][component]];
 }
