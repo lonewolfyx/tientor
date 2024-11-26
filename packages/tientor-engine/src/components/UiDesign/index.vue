@@ -1,5 +1,4 @@
 <template>
-    {{ ui }}
     <a-radio-group class="grid-cols-1 gap-4 mb-5" style="display: grid !important;" v-model="ui">
         <template v-for="item in uiDesign" :key="item">
             <a-radio :value="item.value" style="margin: 0 !important;padding: 0!important;">

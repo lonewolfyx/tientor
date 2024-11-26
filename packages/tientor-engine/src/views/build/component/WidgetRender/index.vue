@@ -1,4 +1,8 @@
 <template>
+    {{ ui }}
+    <TientorFormWrapper :ui="ui">
+<!--        <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item"/>-->
+    </TientorFormWrapper>
     <!--    {{widgetList}}-->
     <!--    <TientorForm>-->
     <!--        <component is="TientorInput" v-bind="queryForm"/>-->
@@ -6,32 +10,32 @@
     <!--    <a-input v-model="queryForm.value"/>-->
     <!--    {{queryForm}}-->
     <!--    <component is="TientorInput" v-bind="queryForm"/>-->
-    <component is="TientorForm">
-<!--        <component is="TientorFormItem">-->
-<!--            <component is="TientorInput" v-bind="queryForm"/>-->
-<!--        </component>-->
-<!--        <component is="TientorFormItem">-->
-<!--            <component is="TientorInput" v-bind="queryForm"/>-->
-<!--        </component>-->
-    </component>
-    <!-- render-wrapper -->
-    <VueDraggable
-        v-model="widgetList"
-        :animation="150"
-        group="people"
-        ghostClass="ghost"
-    >
-<!--        <template v-for="item in widgetList" :key="item.id">-->
-<!--            <p>{{ item }}</p>-->
-<!--            <component is="TientorInput" v-bind="queryForm"/>-->
-<!--        </template>-->
-    </VueDraggable>
+    <!--    <component is="TientorForm">-->
+    <!--        <component is="TientorFormItem">-->
+    <!--            <component is="TientorInput" v-bind="queryForm"/>-->
+    <!--        </component>-->
+    <!--        <component is="TientorFormItem">-->
+    <!--            <component is="TientorInput" v-bind="queryForm"/>-->
+    <!--        </component>-->
+    <!--    </component>-->
 
+    <!-- render-wrapper -->
+    <!--    <VueDraggable-->
+    <!--        v-model="widgetList"-->
+    <!--        :animation="150"-->
+    <!--        group="people"-->
+    <!--        ghostClass="ghost"-->
+    <!--    >-->
+    <!--        <template v-for="item in widgetList" :key="item.id">-->
+    <!--            <p>{{ item }}</p>-->
+    <!--            &lt;!&ndash;            <component is="TientorInput" v-bind="queryForm"/>&ndash;&gt;-->
+    <!--        </template>-->
+    <!--    </VueDraggable>-->
 </template>
 
 <script setup>
-import {VueDraggable} from "vue-draggable-plus";
 import {useDesignerStore} from "@/stores/designer.js";
+import {useConfigStore} from "@/stores/config.js";
 
 defineOptions({
     name: 'WidgetRender'
@@ -39,6 +43,7 @@ defineOptions({
 
 const {widgetList} = toRefs(useDesignerStore())
 
+const {ui} = toRefs(useConfigStore())
 const queryForm = ref({
     value: ''
 })

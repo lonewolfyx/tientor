@@ -15,3 +15,4 @@ coverage
 *.sw?
 
 pnpm-lock.yaml
+_out_
