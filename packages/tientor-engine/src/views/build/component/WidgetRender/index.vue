@@ -42,14 +42,14 @@
 
 <script setup>
 import {useDesignerStore} from "@/stores/designer.js";
-import {useConfigStore} from "@/stores/config.js";
 import {VueDraggable} from "vue-draggable-plus";
+import {useConfigStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'WidgetRender'
 })
 
-const {formProp,widgetList} = toRefs(useDesignerStore())
+const {formProp, widgetList} = toRefs(useDesignerStore())
 
 const {ui} = toRefs(useConfigStore())
 

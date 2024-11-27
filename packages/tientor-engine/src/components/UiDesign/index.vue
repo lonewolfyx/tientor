@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import {useConfigStore} from "@/stores/config.js";
+import {useConfigStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'UiDesign'

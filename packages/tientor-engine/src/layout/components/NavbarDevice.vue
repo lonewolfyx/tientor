@@ -13,7 +13,7 @@
 
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
-import {useConfigStore} from "@/stores/config.js";
+import {useConfigStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'NavbarDevice'

@@ -1,7 +1,10 @@
+import {defineStore} from 'pinia';
+// import {ref} from 'vue'
+
 export const useConfigStore = defineStore('config', () => {
     const config = ref({
         // ui组件库
-        ui: 'antv',
+        ui: 'element',
         // 设备，desktop - web端，mobile - 移动端
         device: 'desktop',
     })
