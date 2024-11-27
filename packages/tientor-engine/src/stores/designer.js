@@ -1,11 +1,13 @@
 import {uuid} from "@/util/util.js";
 import {clone} from "radash";
 import InputWidget from "@tientor/tientor-widget/src/widget/InputWidget.js";
+import FormProp from "@tientor/tientor-widget/src/FormProp.js";
 
 export const useDesignerStore = defineStore('designer', () => {
 
     //
     const formConfig = ref({
+        formProp: FormProp,
         widgetList: [InputWidget],
         currentWidget: {}
     })
