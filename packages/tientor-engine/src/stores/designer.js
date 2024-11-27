@@ -12,6 +12,16 @@ export const useDesignerStore = defineStore('designer', () => {
         currentWidget: {}
     })
 
+    // 表单配置
+    const formProp = computed({
+        get() {
+            return formConfig.value.formProp;
+        },
+        set(value) {
+            formConfig.value.formProp = value;
+        }
+    })
+
     // 组件列表
     const widgetList = computed({
         get() {
@@ -64,6 +74,7 @@ export const useDesignerStore = defineStore('designer', () => {
 
     return {
         formConfig,
+        formProp,
         widgetList,
         currentWidget,
         clearWidget,

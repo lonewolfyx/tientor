@@ -85,3 +85,14 @@ export const getUiComponent = (component = '') => {
     }
     return widget.value[mappedComponent];
 };
+
+
+// 过滤指定的对象字段
+export const filterObject = (obj, fields) => {
+    return fields.reduce((acc, field) => {
+        if (obj.hasOwnProperty(field)) {
+            acc[field] = obj[field];
+        }
+        return acc;
+    }, {});
+}

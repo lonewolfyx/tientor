@@ -27,7 +27,9 @@ export default {
         // 必填星号前后位
         asteriskPosition: '',
         // 是否隐藏标签
-        hideLabel: false
+        hideLabel: false,
+        // 是否隐藏星号
+        hideAsterisk:false
     },
     _widgetProp: {}
 }

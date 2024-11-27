@@ -1,17 +1,21 @@
 <template>
-    <component :is="FormComponent" :model="queryForm">
+    <component
+        :is="FormComponent"
+        v-bind="filterObject(formProp,formProps[ui])"
+    >
         <slot/>
     </component>
 </template>
 
 <script setup>
-import {getUiComponent, setUiComponent} from "../utils/utils.js";
+import {filterObject, getUiComponent, setUiComponent} from "../utils/utils.js";
+import formProps from "../config/formProps.js";
 
 defineOptions({
     name: 'TientorFormWrapper'
 })
 
-const {ui} = defineProps(['ui'])
+const {ui, formProp} = defineProps(['ui', 'formProp'])
 
 // form 表单容器
 const FormComponent = shallowRef({})
@@ -23,7 +27,3 @@ watchEffect(() => {
     FormComponent.value = getUiComponent('form')
 })
 </script>
-
-<style scoped lang="scss">
-
-</style>
