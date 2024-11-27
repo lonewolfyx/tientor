@@ -6,13 +6,16 @@
         <section class="tientor-render">
             <WidgetRender/>
         </section>
-        <section class="tientor-config"></section>
+        <section class="tientor-config">
+            <FormConfiguration/>
+        </section>
     </section>
 </template>
 
 <script setup>
 import Sidebar from "@/views/build/component/Sidebar/index.vue";
 import WidgetRender from "@/views/build/component/WidgetRender/index.vue";
+import FormConfiguration from "@/views/build/component/FormConfiguration/index.vue";
 
 const {sss} = defineProps(['sss'])
 </script>
