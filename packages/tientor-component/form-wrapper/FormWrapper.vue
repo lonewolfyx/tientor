@@ -17,7 +17,7 @@ defineOptions({
 const {ui} = defineProps(['ui'])
 
 // form 表单容器
-const FormComponent = ref({})
+const FormComponent = shallowRef({})
 
 const queryForm = ref({})
 

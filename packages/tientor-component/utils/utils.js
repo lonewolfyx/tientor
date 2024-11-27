@@ -63,7 +63,25 @@ export const setUiComponent = (ui) => {
 
 
 // 获取指定的 ui 组件库
+// export const getUiComponent = (component = '') => {
+//     console.log('Current UI:', currentUi.value);
+//     console.log('Widget:', widget.value);
+//     console.log('Widget Map:', widgetMap);
+//     console.log('响应返回的组件：',widget.value[widgetMap[currentUi.value][component]])
+//
+//     // console.log(currentUi.value, widget.value, widgetMap[currentUi.value])
+//     return widget.value[widgetMap[currentUi.value][component]]
+// }
+
 export const getUiComponent = (component = '') => {
-    console.log(currentUi.value, widget.value, widgetMap[currentUi.value])
-    return widget.value[widgetMap[currentUi.value][component]]
-}
+    if (!currentUi.value || !widget.value) {
+        console.warn('UI library not initialized.');
+        return null;
+    }
+    const mappedComponent = widgetMap[currentUi.value]?.[component];
+    if (!mappedComponent || !widget.value[mappedComponent]) {
+        console.warn(`Component "${component}" not found in UI library "${currentUi.value}".`);
+        return null;
+    }
+    return widget.value[mappedComponent];
+};

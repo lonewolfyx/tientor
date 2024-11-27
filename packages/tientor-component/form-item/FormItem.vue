@@ -1,7 +1,8 @@
 <template>
-    {{ $attrs }}
-    <component :is="FormItemComponent">
-        <!--        <component :is="FormWidgetComponent"/>-->
+    {{ widget }}
+    <!--    <p>{{ FormItemComponent }}</p>-->
+    <component :is="FormItemComponent" v-bind="$attrs">
+        <component :is="FormWidgetComponent" v-bind="$attrs"/>
     </component>
 </template>
 
@@ -13,14 +14,11 @@ defineOptions({
 })
 
 // form 表单项
-const FormItemComponent = ref({})
+const FormItemComponent = computed(() => getUiComponent('formItem'))
 // form 表单控件
-const FormWidgetComponent = ref({})
+const FormWidgetComponent = computed(() => getUiComponent('input'))
 
-onMounted(() => {
-    FormItemComponent.value = getUiComponent('formItem')
-    // FormWidgetComponent.value = markRaw(getUiComponent('input'))
-})
+const {widget} = useAttrs();
 </script>
 
 <style scoped lang="scss">

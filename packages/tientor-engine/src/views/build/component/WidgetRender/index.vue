@@ -1,7 +1,14 @@
 <template>
-    {{ ui }}
     <TientorFormWrapper :ui="ui">
-<!--        <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item"/>-->
+        <VueDraggable
+            v-model="widgetList"
+            :animation="150"
+            group="people"
+            ghostClass="ghost"
+            class="render-wrapper"
+        >
+            <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item"/>
+        </VueDraggable>
     </TientorFormWrapper>
     <!--    {{widgetList}}-->
     <!--    <TientorForm>-->
@@ -36,6 +43,7 @@
 <script setup>
 import {useDesignerStore} from "@/stores/designer.js";
 import {useConfigStore} from "@/stores/config.js";
+import {VueDraggable} from "vue-draggable-plus";
 
 defineOptions({
     name: 'WidgetRender'
@@ -44,15 +52,7 @@ defineOptions({
 const {widgetList} = toRefs(useDesignerStore())
 
 const {ui} = toRefs(useConfigStore())
-const queryForm = ref({
-    value: ''
-})
-const list2 = ref([
-    {
-        "name": "Joao-2",
-        "id": "1-2"
-    }
-])
+
 </script>
 
 <style scoped lang="scss">
