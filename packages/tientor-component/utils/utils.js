@@ -47,9 +47,9 @@ export const setUiComponent = (ui) => {
                 loadCss('https://unpkg.com/element-plus/dist/index.css');
                 break;
             // 确保加载 Arco 的 CSS
-            case 'arco':
-                loadCss('https://unpkg.com/@arco-design/web-vue/dist/arco.css');
-                break;
+            // case 'arco':
+            //     loadCss('https://unpkg.com/@arco-design/web-vue/dist/arco.css');
+            //     break;
         }
         widget.value = uiLibraries[ui];
         // console.log(uiLibraries[ui])

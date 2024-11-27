@@ -1,8 +1,9 @@
 <template>
-    {{ widget }}
-    <!--    <p>{{ FormItemComponent }}</p>-->
-    <component :is="FormItemComponent" v-bind="$attrs">
-        <component :is="FormWidgetComponent" v-bind="$attrs"/>
+    {{ $attrs }}
+    <!-- 表单 form-item -->
+    <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps">
+        <!-- 对应表单控件 -->
+        <component :is="FormWidgetComponent" v-bind="$attrs.widget._widgetProp"/>
     </component>
 </template>
 
@@ -13,14 +14,10 @@ defineOptions({
     name: 'TientorFormItem'
 })
 
+const {widget} = useAttrs();
+
 // form 表单项
 const FormItemComponent = computed(() => getUiComponent('formItem'))
 // form 表单控件
-const FormWidgetComponent = computed(() => getUiComponent('input'))
-
-const {widget} = useAttrs();
+const FormWidgetComponent = computed(() => getUiComponent(widget?.tag))
 </script>
-
-<style scoped lang="scss">
-
-</style>

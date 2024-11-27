@@ -1,17 +1,12 @@
 import {uuid} from "@/util/util.js";
 import {clone} from "radash";
+import InputWidget from "@tientor/tientor-widget/src/widget/InputWidget.js";
 
 export const useDesignerStore = defineStore('designer', () => {
 
     //
     const formConfig = ref({
-        widgetList: [{
-            "id": "077939ac6c94419f9abfbb1621d824ae",
-            "name": "输入框",
-            "icon": "widget-password",
-            "tag": "password",
-            "prop": {}
-        }],
+        widgetList: [InputWidget],
         currentWidget: {}
     })
 

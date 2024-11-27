@@ -1,7 +1,4 @@
 <template>
-    <div>
-        这里是 form 表单{{ ui }}
-    </div>
     <component :is="FormComponent" :model="queryForm">
         <slot/>
     </component>

@@ -1,11 +1,11 @@
 <template>
-    <TientorFormWrapper :ui="ui">
+    <TientorFormWrapper :ui="ui" class="render-wrapper">
         <VueDraggable
             v-model="widgetList"
             :animation="150"
             group="people"
             ghostClass="ghost"
-            class="render-wrapper"
+            class="w-full h-full"
         >
             <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item"/>
         </VueDraggable>
