@@ -3,6 +3,44 @@ export default {
         form: 'ElForm',
         formItem: 'ElFormItem',
         input: 'ElInput',
+        // 级联选择器
+        cascader: 'ElCascader',
+        // 多选框
+        checkbox: 'ElCheckbox',
+        // 颜色选择器
+        color: 'ElColorPicker',
+        // 日期时间选择器
+        dateTime: 'ElDatePicker',
+        // 日期选择器
+        date: 'ElDatePicker',
+        // 数字输入框
+        number: 'ElInputNumber',
+        // 密码输入框
+        password: 'ElInput',
+        // 单选框
+        radio: 'ElRadio',
+        // 评分
+        rate: 'ElRate',
+        // 选择器
+        select: 'ElSelect',
+        // 滑块
+        slider: 'ElSlider',
+        // 开关
+        switch: 'ElSwitch',
+        // 多行文本框
+        textarea: 'ElInput',
+        // 时间选择器
+        timePicker: 'ElTimePicker',
+        // 时间选择
+        timeSelect: 'ElTimePicker',
+        // 穿梭框
+        transfer: 'ElTransfer',
+        // 树形选择器
+        treeSelect: 'ElTreeSelect',
+        // 树形控件
+        tree: 'ElTree',
+        // 上传
+        upload: 'ElUpload'
     },
     'arco': {
         form: 'Form',
