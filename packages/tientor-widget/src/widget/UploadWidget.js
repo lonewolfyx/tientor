@@ -1,4 +1,12 @@
 export default {
     name: '上传',
-    icon: 'widget-upload'
+    icon: 'widget-upload',
+    tag: 'upload',
+    enabled: {
+        element: true,
+        antv: true,
+        arco: true
+    },
+    _itemProps: {},
+    _widgetProp: {}
 }

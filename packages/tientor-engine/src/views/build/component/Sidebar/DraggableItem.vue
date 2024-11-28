@@ -1,5 +1,5 @@
 <template>
-    <div class="draggable-item" @click="addFormWidget(item)">
+    <div class="draggable-item" @click="addFormWidget(item)" v-if="item.enabled[ui]">
         <SvgIcon :name="item.icon" className="w-6 h-6 mr-3 hover:fill-white" color="#d4d4d8"/>
         <span class="title">{{ item.name }}</span>
     </div>
@@ -8,13 +8,14 @@
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import {useDesignerStore} from "@/stores/designer.js";
+import {useConfigStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'DraggableItem'
 })
 
 const {item} = defineProps(['item'])
-
+const {ui} = toRefs(useConfigStore())
 const {addFormWidget} = useDesignerStore()
 </script>
 

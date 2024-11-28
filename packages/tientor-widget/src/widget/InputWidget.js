@@ -3,6 +3,11 @@ export default {
     name: '输入框',
     icon: 'widget-input',
     tag: 'input',
+    enabled: {
+        element: true,
+        antv: true,
+        arco: true
+    },
     _itemProps: {
         // 标签文本
         label: '输入框',
