@@ -1,5 +1,10 @@
 <template>
-    <TientorFormWrapper :ui="ui" class="render-wrapper" :formProp="formProp">
+    <TientorFormWrapper
+        :ui="ui"
+        class="render-wrapper"
+        :formProp="formProp"
+        :class="device"
+    >
         <VueDraggable
             v-model="widgetList"
             :animation="150"
@@ -51,12 +56,16 @@ defineOptions({
 
 const {formProp, widgetList} = toRefs(useDesignerStore())
 
-const {ui} = toRefs(useConfigStore())
+const {ui, device} = toRefs(useConfigStore())
 
 </script>
 
 <style scoped lang="scss">
 .render-wrapper {
     @apply relative box-border w-full h-full bg-white overflow-y-auto rounded;
+
+    &.mobile {
+        @apply m-auto w-[26.7857rem] border-[5px] border-solid border-gray-500 rounded-2xl;
+    }
 }
 </style>
