@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        // 设置相对路径的基准
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+            // 配置 @ 别名映射到 src 目录
+        },
+        // 启用生成 .d.ts 文件
+        "declaration": true,
+        // .d.ts 文件的输出目录
+        "declarationDir": "./dist",
+        // 仅生成声明文件，不编译代码
+        "emitDeclarationOnly": true,
+        // 输出目录
+        "outDir": "./dist",
+        // 模块解析方式
+        "moduleResolution": "Node",
+        // 输出目标
+        "target": "ES2020",
+        // 模块格式
+        "module": "ESNext",
+        // 启用严格模式
+        "strict": true,
+        // 启用 ES 模块兼容
+        "esModuleInterop": true,
+        // 跳过库的类型检查
+        "skipLibCheck": true
+    },
+    // 指定包含的文件
+    "include": [
+        "src/**/*"
+    ],
+    // 排除的文件或目录
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

@@ -1,9 +1,8 @@
 import {defineStore} from 'pinia';
 
 import {clone} from "radash";
-import InputWidget from "@tientor/tientor-widget/src/widget/InputWidget.js";
-import FormProp from "@tientor/tientor-widget/src/FormProp.js";
 import {uuid} from "@/utils/utils.js";
+import {FormProp, InputWidget} from "@tientor/tientor-widget";
 
 export const useDesignerStore = defineStore('designer', () => {
 

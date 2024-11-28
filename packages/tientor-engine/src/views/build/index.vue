@@ -4,7 +4,7 @@
             <Sidebar/>
         </section>
         <section class="tientor-render">
-            <WidgetRender/>
+<!--            <WidgetRender/>-->
         </section>
         <section class="tientor-config">
             <FormConfiguration/>

@@ -1,6 +1,7 @@
 <template>
     <a-tabs default-active-key="ComponentSettings" lazy-load trigger="hover">
         <a-tab-pane key="ComponentSettings" title="组件设置" class="px-5 pb-4">
+            {{currentWidget}}
             <a-form
                 :model="{}"
                 auto-label-width
@@ -33,9 +34,13 @@
 </template>
 
 <script setup>
+import {useDesignerStore} from "@tientor/tientor-hooks";
+
 defineOptions({
     name: 'FormConfiguration'
 })
+
+const {currentWidget} = toRefs(useDesignerStore())
 </script>
 
 <style scoped lang="scss">

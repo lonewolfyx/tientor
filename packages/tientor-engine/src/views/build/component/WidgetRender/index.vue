@@ -66,8 +66,7 @@ const {ui, device} = toRefs(useConfigStore())
 
 const handleAdd = (events) => {
     nextTick(() => {
-        const {newIndex} = events
-        console.log(newIndex, widgetList.value[newIndex], currentWidget.value)
+        const {newIndex} = events;
         updateCurrentWidget.value(widgetList.value[newIndex])
     })
 }

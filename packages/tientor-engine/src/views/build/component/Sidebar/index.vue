@@ -27,10 +27,10 @@
 import {VueDraggable} from "vue-draggable-plus";
 import DividerHeader from "@/components/DividerHeader/index.vue";
 import {clone} from 'radash'
-import {basicComponents} from "@tientor/tientor-widget";
 import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
 import UiDesign from "@/components/UiDesign/index.vue";
 import {useDesignerStore} from "@tientor/tientor-hooks";
+import {basicComponents} from "@tientor/tientor-widget";
 
 defineOptions({
     name: 'Sidebar'

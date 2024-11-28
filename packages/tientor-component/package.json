@@ -2,8 +2,17 @@
     "name": "@tientor/tientor-component",
     "version": "1.0.1",
     "private": true,
-    "main": "index.js",
+    "main": "./src/index.js",
+    "module": "./dist/tientor-component.es.js",
+    "exports": {
+        "import": "./dist/tientor-component.es.js",
+        "require": "./dist/tientor-component.cjs.js"
+    },
     "type": "module",
+    "scripts": {
+        "dev": "vite build --watch",
+        "build": "vite build"
+    },
     "author": "世界上最靓的仔",
     "license": "MIT",
     "dependencies": {
@@ -11,6 +20,10 @@
         "@tientor/tientor-hooks": "workspace:^",
         "ant-design-vue": "^4.2.6",
         "element-plus": "^2.8.8",
-        "vue": "^3.5.12"
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.1.4",
+        "vite": "^5.4.10"
     }
 }
