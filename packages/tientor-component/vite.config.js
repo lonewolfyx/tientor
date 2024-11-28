@@ -18,5 +18,15 @@ export default defineConfig({
             // formats: ['es', 'umd', 'cjs'], // 指定输出格式
             fileName: (format) => `tientor-component.${format}.js`, // 输出文件名
         },
+        rollupOptions: {
+            // 确保外部化处理 Vue 相关依赖，不打包进库
+            external: ['vue', 'pinia'],
+            output: {
+                globals: {
+                    vue: 'Vue', // Vue 的全局变量名称
+                    pinia: 'Pinia'
+                },
+            },
+        }
     },
 });

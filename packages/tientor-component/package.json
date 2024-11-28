@@ -2,11 +2,13 @@
     "name": "@tientor/tientor-component",
     "version": "1.0.1",
     "private": true,
-    "main": "./src/index.js",
-    "module": "./dist/tientor-component.es.js",
+    "main": "dist/tientor-component.umd.js",
+    "module": "dist/tientor-component.es.js",
     "exports": {
-        "import": "./dist/tientor-component.es.js",
-        "require": "./dist/tientor-component.cjs.js"
+        ".": {
+            "import": "./dist/tientor-component.es.js",
+            "require": "./dist/tientor-component.umd.js"
+        }
     },
     "type": "module",
     "scripts": {
@@ -15,15 +17,22 @@
     },
     "author": "世界上最靓的仔",
     "license": "MIT",
+    "peerDependencies": {
+        "vue": "^3.5.13"
+    },
     "dependencies": {
         "@arco-design/web-vue": "^2.56.3",
         "@tientor/tientor-hooks": "workspace:^",
         "ant-design-vue": "^4.2.6",
         "element-plus": "^2.8.8",
-        "vue": "^3.5.13"
+        "pinia": "^2.2.6"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.1.4",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.49",
+        "sass": "^1.81.0",
+        "tailwindcss": "^3.4.15",
         "vite": "^5.4.10"
     }
 }

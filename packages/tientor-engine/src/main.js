@@ -16,7 +16,7 @@ import router from './router'
 import 'virtual:svg-icons-register'
 // import TientorFormWrapper from "@tientor/tientor-component/form-wrapper/index.js";
 // import TientorFormItem from "@tientor/tientor-component/form-item/index.js";
-// import {TientorFormItem, TientorFormWrapper} from '@tientor/tientor-component/src/index.js'
+import {TientorFormItem, TientorFormWrapper} from '@tientor/tientor-component'
 
 const app = createApp(App)
 
@@ -29,8 +29,8 @@ app.use(ArcoVue)
 app.use(ArcoVueIcon)
 
 // 注册表单
-// app.component('TientorFormWrapper', TientorFormWrapper)
-// app.component('TientorFormItem', TientorFormItem)
+app.component('TientorFormWrapper', TientorFormWrapper)
+app.component('TientorFormItem', TientorFormItem)
 
 
 app.mount('#app')
