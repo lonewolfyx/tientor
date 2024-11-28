@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-operation">
         <a-space :size="15">
-            <a-button size="mini" @click="">
+            <a-button size="mini" @click="clearWidget">
                 <template #icon>
                     <SvgIcon name="clear" class-name="w-[0.857rem] h-[0.857rem] mr-1"/>
                 </template>
@@ -35,10 +35,13 @@
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import GouTou from '@/assets/image/avatar.webp'
+import {useDesignerStore} from "@/stores/designer.js";
 
 defineOptions({
     name: 'NavbarOperation'
 })
+
+const {clearWidget} = useDesignerStore()
 </script>
 
 <style scoped lang="scss">
