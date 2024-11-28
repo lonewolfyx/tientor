@@ -9,7 +9,8 @@
         "require": "./dist/tientor-hooks.cjs.js"
     },
     "scripts": {
-        "build": "vite build --watch"
+        "dev": "vite build --watch",
+        "build": "vite build"
     },
     "types": "./index.d.ts",
     "author": "世界上最靓的仔",

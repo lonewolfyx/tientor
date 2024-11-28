@@ -5,14 +5,16 @@
     "main": "index.js",
     "scripts": {
         "dev": "pnpm -F @tientor/tientor-engine dev",
-        "build": "pnpm -F @tientor/tientor-engine build",
-        "build:tientor-hook": "pnpm -F @tientor/tientor-hooks build"
+        "build": "pnpm -F @tientor/tientor-hooks build && pnpm -F @tientor/tientor-engine build",
+        "build:tientor-hook": "pnpm -F @tientor/tientor-hooks build",
+        "test:move": "./scripts/build.sh"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "@arco-design/web-vue": "^2.56.3",
+        "fs-extra": "^11.2.0",
         "radash": "^12.1.0",
         "vue": "^3.5.12"
     }
