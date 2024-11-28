@@ -11,7 +11,8 @@ export const useDesignerStore = defineStore('designer', () => {
     const formConfig = ref({
         formProp: FormProp,
         widgetList: [InputWidget],
-        currentWidget: InputWidget
+        currentWidget: InputWidget,
+        first: {}
     })
 
     // 表单配置
@@ -42,6 +43,16 @@ export const useDesignerStore = defineStore('designer', () => {
         },
         set(value) {
             return formConfig.value.currentWidget = value;
+        }
+    });
+
+    // 第一个组件
+    const firstWidget = computed({
+        get() {
+            return formConfig.value.first;
+        },
+        set(value) {
+            return formConfig.value.first = value;
         }
     });
 
@@ -77,6 +88,12 @@ export const useDesignerStore = defineStore('designer', () => {
     // 更新当前选中的数据值
     const updateCurrentWidget = (widget) => {
         formConfig.value.currentWidget = widget
+        getFirstWidget()
+    }
+
+    // 获取第一个组件
+    const getFirstWidget = () => {
+        formConfig.value.first = formConfig.value.widgetList?.[0]
     }
 
     return {
@@ -84,6 +101,7 @@ export const useDesignerStore = defineStore('designer', () => {
         formProp,
         widgetList,
         currentWidget,
+        firstWidget,
         clearWidget,
         addFormWidget,
         cloneWidgetItem,

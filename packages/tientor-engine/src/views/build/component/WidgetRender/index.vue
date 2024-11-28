@@ -11,8 +11,15 @@
             group="people"
             ghostClass="ghost"
             class="w-full h-full p-3"
+            @add="handleAdd"
         >
-            <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item" :ui="ui"/>
+            <TientorFormItem
+                v-for="item in widgetList"
+                :key="item.id"
+                :widget="item"
+                :ui="ui"
+                :currentWidget="currentWidget"
+            />
         </VueDraggable>
     </TientorFormWrapper>
     <!--    {{widgetList}}-->
@@ -46,18 +53,24 @@
 </template>
 
 <script setup>
-import {useDesignerStore} from "@/stores/designer.js";
 import {VueDraggable} from "vue-draggable-plus";
-import {useConfigStore} from "@tientor/tientor-hooks";
+import {useConfigStore, useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'WidgetRender'
 })
 
-const {formProp, widgetList} = toRefs(useDesignerStore())
+const {formProp, widgetList, currentWidget, updateCurrentWidget} = toRefs(useDesignerStore())
 
 const {ui, device} = toRefs(useConfigStore())
 
+const handleAdd = (events) => {
+    nextTick(() => {
+        const {newIndex} = events
+        console.log(newIndex, widgetList.value[newIndex], currentWidget.value)
+        updateCurrentWidget.value(widgetList.value[newIndex])
+    })
+}
 </script>
 
 <style scoped lang="scss">
