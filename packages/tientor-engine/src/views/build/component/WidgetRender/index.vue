@@ -12,7 +12,7 @@
             ghostClass="ghost"
             class="w-full h-full p-3"
         >
-            <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item"/>
+            <TientorFormItem v-for="item in widgetList" :key="item.id" :widget="item" :ui="ui"/>
         </VueDraggable>
     </TientorFormWrapper>
     <!--    {{widgetList}}-->

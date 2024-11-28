@@ -1,7 +1,7 @@
 <template>
     {{ $attrs }}
     <!-- 表单 form-item -->
-    <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps">
+    <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps" v-if="$attrs.widget.enabled[ui]">
         <!-- 对应表单控件 -->
         <component :is="FormWidgetComponent" v-bind="$attrs.widget._widgetProp"/>
     </component>
@@ -14,6 +14,7 @@ defineOptions({
     name: 'TientorFormItem'
 })
 
+const {ui} = defineProps(['ui'])
 const {widget} = useAttrs();
 
 // form 表单项
