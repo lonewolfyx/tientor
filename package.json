@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "pnpm -F @tientor/tientor-engine dev",
-        "build": "pnpm -F @tientor/tientor-engine build"
+        "build": "pnpm -F @tientor/tientor-engine build",
+        "build:tientor-hook": "pnpm -F @tientor/tientor-hooks build"
     },
     "keywords": [],
     "author": "",
