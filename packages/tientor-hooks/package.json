@@ -19,6 +19,7 @@
         "vite": "^5.4.10"
     },
     "dependencies": {
+        "@tientor/tientor-widget": "workspace:^",
         "pinia": "^2.2.6",
         "vue": "^3.5.12"
     }

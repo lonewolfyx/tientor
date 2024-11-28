@@ -28,9 +28,9 @@ import {VueDraggable} from "vue-draggable-plus";
 import DividerHeader from "@/components/DividerHeader/index.vue";
 import {clone} from 'radash'
 import {basicComponents} from "@tientor/tientor-widget";
-import {useDesignerStore} from "@/stores/designer.js";
 import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
 import UiDesign from "@/components/UiDesign/index.vue";
+import {useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'Sidebar'

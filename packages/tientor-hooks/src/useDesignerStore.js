@@ -1,7 +1,9 @@
-import {uuid} from "@/util/util.js";
+import {defineStore} from 'pinia';
+
 import {clone} from "radash";
 import InputWidget from "@tientor/tientor-widget/src/widget/InputWidget.js";
 import FormProp from "@tientor/tientor-widget/src/FormProp.js";
+import {uuid} from "@/utils/utils.js";
 
 export const useDesignerStore = defineStore('designer', () => {
 
@@ -9,7 +11,7 @@ export const useDesignerStore = defineStore('designer', () => {
     const formConfig = ref({
         formProp: FormProp,
         widgetList: [InputWidget],
-        currentWidget: {}
+        currentWidget: InputWidget
     })
 
     // 表单配置
@@ -72,6 +74,11 @@ export const useDesignerStore = defineStore('designer', () => {
         formConfig.value.widgetList = []
     }
 
+    // 更新当前选中的数据值
+    const updateCurrentWidget = (widget) => {
+        formConfig.value.currentWidget = widget
+    }
+
     return {
         formConfig,
         formProp,
@@ -79,7 +86,8 @@ export const useDesignerStore = defineStore('designer', () => {
         currentWidget,
         clearWidget,
         addFormWidget,
-        cloneWidgetItem
+        cloneWidgetItem,
+        updateCurrentWidget
     }
 }, {
     persist: true

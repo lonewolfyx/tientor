@@ -35,7 +35,7 @@
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import GouTou from '@/assets/image/avatar.webp'
-import {useDesignerStore} from "@/stores/designer.js";
+import {useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'NavbarOperation'

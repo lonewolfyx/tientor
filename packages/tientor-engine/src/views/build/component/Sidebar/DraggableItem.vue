@@ -7,8 +7,7 @@
 
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
-import {useDesignerStore} from "@/stores/designer.js";
-import {useConfigStore} from "@tientor/tientor-hooks";
+import {useConfigStore, useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'DraggableItem'
