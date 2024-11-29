@@ -1,6 +1,6 @@
 {
     "name": "tientor",
-    "version": "1.0.0",
+    "version": "1.0.37",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -15,6 +15,7 @@
     "dependencies": {
         "@arco-design/web-vue": "^2.56.3",
         "fs-extra": "^11.2.0",
-        "radash": "^12.1.0"
+        "radash": "^12.1.0",
+        "vue": "^3.5.13"
     }
 }
