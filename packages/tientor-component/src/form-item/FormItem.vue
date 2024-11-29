@@ -22,16 +22,16 @@
         >
             <div class="widget-actin-item">
                 <span class="common"><icon-common class="mr-1"/>{{ $attrs.widget.name }}</span>
-                <span class="copy"><icon-copy/></span>
-                <span class="delete"><icon-delete/></span>
+                <span class="copy" @click="copyWidget($attrs.widget)"><icon-copy/></span>
+                <span class="delete" @click="deleteWidget($attrs.widget)"><icon-delete/></span>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import '@/assets/tailwindcss.css';
-import {getUiComponent} from "@/utils/utils.js";
+import '../assets/tailwindcss.css';
+import {getUiComponent} from "../utils/utils.js";
 import {useDesignerStore} from '@tientor/tientor-hooks'
 
 defineOptions({
@@ -46,7 +46,7 @@ const FormItemComponent = computed(() => getUiComponent('formItem'))
 // form 表单控件
 const FormWidgetComponent = computed(() => getUiComponent(widget?.tag));
 
-const {updateCurrentWidget, firstWidget} = toRefs(useDesignerStore());
+const {updateCurrentWidget, firstWidget, copyWidget, deleteWidget} = toRefs(useDesignerStore());
 
 
 </script>
@@ -74,7 +74,7 @@ const {updateCurrentWidget, firstWidget} = toRefs(useDesignerStore());
     }
 
     .widget-action-box {
-        @apply absolute top-[-20px] left-1.5 cursor-pointer hidden text-white;
+        @apply absolute top-[-20px] left-1.5 cursor-pointer hidden text-white z-[111];
 
         .widget-actin-item {
             @apply flex items-center justify-center;

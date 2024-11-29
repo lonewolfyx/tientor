@@ -1,12 +1,12 @@
 import {defineStore} from 'pinia';
 
 import {clone} from "radash";
-import {uuid} from "@/utils/utils.js";
+import {uuid} from "./utils/utils.js";
 import {FormProp, InputWidget} from "@tientor/tientor-widget";
 
 export const useDesignerStore = defineStore('designer', () => {
 
-    //
+    // 配置信息
     const formConfig = ref({
         formProp: FormProp,
         widgetList: [InputWidget],
@@ -58,11 +58,7 @@ export const useDesignerStore = defineStore('designer', () => {
 
     // 添加组件
     const addFormWidget = (widget) => {
-        const id = uuid().split('-').join('')
-        const newWidget = {
-            ...clone(widget),
-            id
-        }
+        const newWidget = cloneWidgetItem(widget)
         formConfig.value.widgetList.push(newWidget)
         updateCurrentWidget(newWidget)
     }
@@ -82,7 +78,21 @@ export const useDesignerStore = defineStore('designer', () => {
 
     // 清空组件
     const clearWidget = () => {
-        formConfig.value.widgetList = []
+        formConfig.value.widgetList = [];
+        formConfig.value.currentWidget = {};
+        formConfig.value.first = {};
+    }
+
+    // 删除当前组件
+    const deleteWidget = (widget) => {
+        const index = formConfig.value.widgetList.findIndex(item => item.id === widget.id)
+        if (index !== -1) {
+            formConfig.value.widgetList.splice(index, 1)
+            updateCurrentWidget(
+                formConfig.value.widgetList[index] ||
+                formConfig.value.widgetList[index - 1]
+            )
+        }
     }
 
     // 更新当前选中的数据值
@@ -96,6 +106,15 @@ export const useDesignerStore = defineStore('designer', () => {
         formConfig.value.first = formConfig.value.widgetList?.[0]
     }
 
+    // 复制组件
+    const copyWidget = (widget) => {
+        const newWidget = cloneWidgetItem(widget);
+        const index = formConfig.value.widgetList.findIndex(item => item.id === widget.id)
+        console.log('index', index)
+        formConfig.value.widgetList.splice(index + 1, 0, newWidget);
+        updateCurrentWidget(newWidget)
+    }
+
     return {
         formConfig,
         formProp,
@@ -105,6 +124,8 @@ export const useDesignerStore = defineStore('designer', () => {
         clearWidget,
         addFormWidget,
         cloneWidgetItem,
+        copyWidget,
+        deleteWidget,
         updateCurrentWidget
     }
 }, {
