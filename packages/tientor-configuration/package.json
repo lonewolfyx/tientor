@@ -1,0 +1,13 @@
+{
+    "name": "@tientor/tientor-configuration",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Tientor 配置管理组件",
+    "keywords": [],
+    "type": "module",
+    "scripts": {
+    },
+    "main": "src/index.js",
+    "author": "世界上最靓的仔",
+    "license": "MIT"
+}
