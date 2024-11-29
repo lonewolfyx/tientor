@@ -10,8 +10,8 @@ export const useDesignerStore = defineStore('designer', () => {
     const formConfig = ref({
         formProp: FormProp,
         widgetList: [InputWidget],
-        currentWidget: InputWidget,
-        first: InputWidget
+        currentWidget: {...InputWidget},
+        first: {...InputWidget}
     })
 
     // 表单配置
@@ -41,7 +41,7 @@ export const useDesignerStore = defineStore('designer', () => {
             return formConfig.value.currentWidget;
         },
         set(value) {
-            return formConfig.value.currentWidget = value;
+            formConfig.value.currentWidget = value;
         }
     });
 
@@ -51,7 +51,7 @@ export const useDesignerStore = defineStore('designer', () => {
             return formConfig.value.first;
         },
         set(value) {
-            return formConfig.value.first = value;
+            formConfig.value.first = value;
         }
     });
 
