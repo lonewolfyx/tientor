@@ -30,6 +30,7 @@
 </template>
 
 <script setup>
+import '@/assets/tailwindcss.css';
 import {getUiComponent} from "@/utils/utils.js";
 import {useDesignerStore} from '@tientor/tientor-hooks'
 

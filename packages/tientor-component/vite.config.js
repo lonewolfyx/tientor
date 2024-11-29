@@ -1,10 +1,12 @@
 import {defineConfig} from 'vite';
 import {fileURLToPath, URL} from "node:url";
 import vue from '@vitejs/plugin-vue'
+import postcss from './postcss.config.js';
 
 export default defineConfig({
     plugins: [
-        vue()
+        vue(),
+        postcss
     ],
     resolve: {
         alias: {
@@ -27,6 +29,14 @@ export default defineConfig({
                     pinia: 'Pinia'
                 },
             },
-        }
+        },
+        cssCodeSplit: true
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler', // or "modern", "legacy"
+            },
+        },
+    }
 });
