@@ -1,6 +1,6 @@
 {
     "name": "@tientor/tientor-widget",
-    "version": "1.0.0",
+    "version": "1.0.10",
     "private": true,
     "main": "dist/tientor-widget.umd.js",
     "module": "dist/tientor-widget.es.js",

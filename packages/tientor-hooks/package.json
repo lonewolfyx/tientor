@@ -1,6 +1,7 @@
 {
     "name": "@tientor/tientor-hooks",
-    "version": "1.0.0",
+    "version": "1.0.10",
+    "private": true,
     "type": "module",
     "main": "./dist/tientor-hooks.es.js",
     "module": "./dist/tientor-hooks.es.js",
