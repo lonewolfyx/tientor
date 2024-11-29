@@ -11,7 +11,7 @@ export const useDesignerStore = defineStore('designer', () => {
         formProp: FormProp,
         widgetList: [InputWidget],
         currentWidget: InputWidget,
-        first: {}
+        first: InputWidget
     })
 
     // 表单配置
@@ -64,6 +64,7 @@ export const useDesignerStore = defineStore('designer', () => {
             id
         }
         formConfig.value.widgetList.push(newWidget)
+        updateCurrentWidget(newWidget)
     }
 
     // 克隆表单项
