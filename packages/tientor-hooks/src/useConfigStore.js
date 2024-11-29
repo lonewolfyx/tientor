@@ -4,7 +4,7 @@ import {defineStore} from 'pinia';
 export const useConfigStore = defineStore('config', () => {
     const config = ref({
         // ui组件库
-        ui: 'element',
+        ui: 'arco',
         // 设备，desktop - web端，mobile - 移动端
         device: 'desktop',
     })
