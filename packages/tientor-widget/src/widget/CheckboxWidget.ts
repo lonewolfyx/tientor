@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const CheckboxWidget: WidgetInterface = {
     name: '多选框',

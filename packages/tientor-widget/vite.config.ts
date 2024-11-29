@@ -1,14 +1,16 @@
 import {defineConfig} from "vite";
-import {fileURLToPath, URL} from 'node:url'
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    resolve: {
-        alias: {
-            // @ts-ignore
-            '@': fileURLToPath(new URL('./src', import.meta.url))
-        },
-    },
+    // resolve: {
+    //     alias: {
+    //         // @ts-ignore
+    //         // '@': fileURLToPath(new URL('./src', import.meta.url)),
+    //         // @ts-ignore
+    //         // '@tientor-component': path.resolve(__dirname, '../tientor-component/src'),
+    //         '#': path.resolve(__dirname, '../src'),
+    //     },
+    // },
     build: {
         lib: {
             entry: 'src/index.ts',

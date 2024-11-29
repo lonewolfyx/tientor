@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const PasswordWidget: WidgetInterface = {
     name: '密码输入框',

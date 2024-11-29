@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const SelectWidget: WidgetInterface = {
     name: '选择器',

@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const TextareaWidget: WidgetInterface = {
     name: '多行文本框',

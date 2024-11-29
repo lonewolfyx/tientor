@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-import {filterObject, getUiComponent, setUiComponent} from "@/utils/utils.js";
-import formProps from "@/config/formProps.js";
+import {filterObject, getUiComponent, setUiComponent} from "../utils/utils.js";
+import formProps from "../config/formProps.js";
 
 defineOptions({
     name: 'TientorFormWrapper'

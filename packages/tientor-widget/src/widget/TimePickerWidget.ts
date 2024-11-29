@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const TimePickerWidget: WidgetInterface = {
     name: '时间选择器',

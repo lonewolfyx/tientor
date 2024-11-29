@@ -5,7 +5,7 @@
 // export default TientorFormItem;
 
 
-import TientorFormItem from "@/form-item/FormItem.vue";
+import TientorFormItem from "./FormItem.vue";
 
 TientorFormItem.install = (app) => {
     app.component(TientorFormItem.name, TientorFormItem);

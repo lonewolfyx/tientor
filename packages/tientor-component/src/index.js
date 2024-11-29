@@ -1,5 +1,5 @@
-import TientorFormWrapper from "@/form-wrapper/index.js";
-import TientorFormItem from "@/form-item/index.js";
+import TientorFormWrapper from "./form-wrapper/index.js";
+import TientorFormItem from "./form-item/index.js";
 
 /**
  * 注册组件

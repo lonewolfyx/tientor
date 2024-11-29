@@ -1,7 +1,7 @@
 import * as ArcoVue from '@arco-design/web-vue';
 import * as Antd from 'ant-design-vue';
 import * as ElementPlus from 'element-plus';
-import widgetMap from "@/config/widgetMap.js";
+import widgetMap from "../config/widgetMap.js";
 
 const currentUi = ref('')
 const widget = ref({})

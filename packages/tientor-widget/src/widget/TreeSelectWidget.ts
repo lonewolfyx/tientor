@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const TreeSelectWidget: WidgetInterface = {
     name: '树形选择器',

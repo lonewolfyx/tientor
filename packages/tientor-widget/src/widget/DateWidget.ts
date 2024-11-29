@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const DateWidget: WidgetInterface = {
     name: '日期选择器',

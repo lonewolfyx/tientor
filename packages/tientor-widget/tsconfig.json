@@ -1,13 +1,19 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "../tientor-widget/.",
         // 设置相对路径的基准
-        "paths": {
-            "@/*": [
-                "src/*"
-            ]
-            // 配置 @ 别名映射到 src 目录
-        },
+//        "paths": {
+////            "@/*": [
+////                "../tientor-widget/src/*"
+////            ],
+//            "#/*": [
+//                "../tientor-widget/src/*"
+//            ],
+//
+//            "@tientor-widget/*": ["../tientor-widget/src/*"]
+//
+//            // 配置 @ 别名映射到 src 目录
+//        },
         // 启用生成 .d.ts 文件
         "declaration": true,
         // .d.ts 文件的输出目录

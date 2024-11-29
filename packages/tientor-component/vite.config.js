@@ -8,11 +8,6 @@ export default defineConfig({
         vue(),
         postcss
     ],
-    resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url))
-        },
-    },
     build: {
         lib: {
             entry: 'src/index.js', // 入口文件

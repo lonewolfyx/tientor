@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const InputWidget: WidgetInterface = {
     id: '0f9167ba92764612b172e6c278e9030a',

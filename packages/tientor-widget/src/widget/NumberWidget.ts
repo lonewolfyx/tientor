@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const NumberWidget: WidgetInterface = {
     name: '数字输入框',

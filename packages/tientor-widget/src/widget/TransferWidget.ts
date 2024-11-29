@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const TransferWidget: WidgetInterface = {
     name: '穿梭框',

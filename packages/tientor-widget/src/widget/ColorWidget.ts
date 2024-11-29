@@ -1,4 +1,4 @@
-import {WidgetInterface} from "@/types/widget";
+import {WidgetInterface} from "../types/widget";
 
 export const ColorWidget: WidgetInterface = {
     name: '颜色选择器',
