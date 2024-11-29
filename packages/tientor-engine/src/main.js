@@ -14,9 +14,6 @@ import App from './App.vue'
 import router from './router'
 
 import 'virtual:svg-icons-register'
-// import TientorFormWrapper from "@tientor/tientor-component/form-wrapper/index.js";
-// import TientorFormItem from "@tientor/tientor-component/form-item/index.js";
-import {TientorFormItem, TientorFormWrapper} from '@tientor/tientor-component'
 
 const app = createApp(App)
 
@@ -27,10 +24,6 @@ pinia.use(piniaPluginPersistedstate)
 app.use(router)
 app.use(ArcoVue)
 app.use(ArcoVueIcon)
-
-// 注册表单
-app.component('TientorFormWrapper', TientorFormWrapper)
-app.component('TientorFormItem', TientorFormItem)
 
 
 app.mount('#app')

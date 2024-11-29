@@ -55,6 +55,8 @@
 <script setup>
 import {VueDraggable} from "vue-draggable-plus";
 import {useConfigStore, useDesignerStore} from "@tientor/tientor-hooks";
+import '@tientor/tientor-component/style.css'
+import {TientorFormItem, TientorFormWrapper} from '@tientor/tientor-component'
 
 defineOptions({
     name: 'WidgetRender'
