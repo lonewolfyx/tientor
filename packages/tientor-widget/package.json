@@ -2,14 +2,14 @@
     "name": "@tientor/tientor-widget",
     "version": "1.0.10",
     "private": true,
-    "main": "dist/tientor-widget.umd.js",
-    "module": "dist/tientor-widget.es.js",
+    "main": "src/index.ts",
+    "module": "src/index.ts",
     "types": "dist/index.d.ts",
     "type": "module",
     "scripts": {
         "types": "tsc --emitDeclarationOnly",
         "build": "vite build",
-        "dev": "vite build --watch"
+        "dev": "vite dev"
     },
     "author": "世界上最靓的仔",
     "license": "MIT",

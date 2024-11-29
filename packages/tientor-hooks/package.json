@@ -3,11 +3,11 @@
     "version": "1.0.10",
     "private": true,
     "type": "module",
-    "main": "./dist/tientor-hooks.es.js",
-    "module": "./dist/tientor-hooks.es.js",
+    "main": "./src/index.js",
+    "module": "./src/index.js",
     "exports": {
-        "import": "./dist/tientor-hooks.es.js",
-        "require": "./dist/tientor-hooks.cjs.js"
+        "import": "./src/index.js",
+        "require": "./src/index.js"
     },
     "scripts": {
         "dev": "vite build --watch",
