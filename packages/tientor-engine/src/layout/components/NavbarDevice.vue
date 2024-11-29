@@ -2,10 +2,10 @@
     <div class="navbar-device">
         <a-radio-group type="button" class="flex" v-model="device">
             <a-radio value="desktop">
-                <SvgIcon name="desktop" className="w-4 h-4"/>
+                <SvgIcon name="desktop" className="w-[1.14rem] h-[1.5rem]"/>
             </a-radio>
             <a-radio value="mobile">
-                <SvgIcon name="mobile" className="w-4 h-4"/>
+                <SvgIcon name="mobile" className="w-[1.14rem] h-[1.5rem]"/>
             </a-radio>
         </a-radio-group>
     </div>
