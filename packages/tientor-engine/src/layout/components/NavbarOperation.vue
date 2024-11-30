@@ -7,7 +7,7 @@
                 </template>
                 清空
             </a-button>
-            <a-button size="mini">
+            <a-button size="mini" @click="reviewComponentRef.showWidgetReview()">
                 <template #icon>
                     <SvgIcon name="code" class-name="w-[0.857rem] h-[0.857rem] mr-1"/>
                 </template>
@@ -30,18 +30,22 @@
             <!-- https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_oYdVBf4PAimDIpbGcAzgiCJtENerAA8oCA8AwO.jpeg -->
         </a-space>
     </div>
+    <ReviewComponent ref="reviewComponentRef"/>
 </template>
 
 <script setup>
 import SvgIcon from "@/components/SvgIcon/SvgIcon.vue";
 import GouTou from '@/assets/image/avatar.webp'
 import {useDesignerStore} from "@tientor/tientor-hooks";
+import ReviewComponent from "@/components/Review/index.vue";
 
 defineOptions({
     name: 'NavbarOperation'
 })
 
 const {clearWidget} = useDesignerStore()
+
+const reviewComponentRef = useTemplateRef('reviewComponentRef')
 </script>
 
 <style scoped lang="scss">
