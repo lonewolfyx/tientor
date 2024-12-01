@@ -14,6 +14,7 @@ import App from './App.vue'
 import router from './router'
 
 import 'virtual:svg-icons-register'
+import TientorConfiguration from "@tientor/tientor-configuration";
 
 const app = createApp(App)
 
@@ -24,6 +25,6 @@ pinia.use(piniaPluginPersistedstate)
 app.use(router)
 app.use(ArcoVue)
 app.use(ArcoVueIcon)
-
+app.use(TientorConfiguration)
 
 app.mount('#app')
