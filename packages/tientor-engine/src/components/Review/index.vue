@@ -8,10 +8,6 @@
         unmountOnClose
         :footer="false"
     >
-        <p>组件预览</p>
-        <!--        <p>{{ formProp }}</p>-->
-        <!--        <p>{{ widgetList }}</p>-->
-
         <TientorFormWrapper
             :ui="ui"
             class="render-wrapper"
