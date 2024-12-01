@@ -1,6 +1,6 @@
 {
     "name": "@tientor/tientor-configuration",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": true,
     "description": "Tientor 配置管理组件",
     "keywords": [],
@@ -8,6 +8,12 @@
     "scripts": {
     },
     "main": "src/index.js",
+    "peerDependencies": {
+        "@arco-design/web-vue": "^2.56.3",
+        "ant-design-vue": "^4.2.6",
+        "element-plus": "^2.8.8",
+        "vue": "^3.5.13"
+    },
     "author": "世界上最靓的仔",
     "license": "MIT"
 }
