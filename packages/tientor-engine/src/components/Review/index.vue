@@ -6,15 +6,30 @@
         @ok="changeStatus"
         @cancel="changeStatus"
         unmountOnClose
+        :footer="false"
     >
         <p>组件预览</p>
-        <p>{{formProp}}</p>
-        <p>{{widgetList}}</p>
+        <!--        <p>{{ formProp }}</p>-->
+        <!--        <p>{{ widgetList }}</p>-->
+
+        <TientorFormWrapper
+            :ui="ui"
+            class="render-wrapper"
+            :formProp="formProp"
+        >
+            <TientorFormItem
+                v-for="item in widgetList"
+                :key="item.id"
+                :widget="item"
+                :ui="ui"
+            />
+        </TientorFormWrapper>
     </a-drawer>
 </template>
 
 <script setup>
-import {useDesignerStore} from "@tientor/tientor-hooks";
+import {useConfigStore, useDesignerStore} from "@tientor/tientor-hooks";
+import {TientorFormItem, TientorFormWrapper} from "@tientor/tientor-component";
 
 defineOptions({
     name: 'ReviewComponent'
@@ -22,10 +37,13 @@ defineOptions({
 
 const visible = ref(false)
 
-const {formProp, widgetList} = toRefs(useDesignerStore())
+const {ui} = toRefs(useConfigStore())
+const {formProp, widgetList, currentWidget} = toRefs(useDesignerStore())
+
 const changeStatus = () => {
     visible.value = !visible.value;
 }
+
 const showWidgetReview = () => {
     changeStatus()
 

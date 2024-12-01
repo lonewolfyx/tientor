@@ -5,7 +5,7 @@
     <div class="widget-items">
         <div
             class="widget-item-body"
-            :class="currentWidget.id === $attrs.widget.id ? 'active' : ''"
+            :class="currentWidget?.id === $attrs.widget.id ? 'active' : ''"
             @click="updateCurrentWidget($attrs.widget)"
         >
             <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps" v-if="$attrs.widget.enabled[ui]">
@@ -16,7 +16,7 @@
         <div
             class="widget-action-box"
             :class="{
-                active: currentWidget.id === $attrs.widget.id,
+                active: currentWidget?.id === $attrs.widget.id,
                 once: firstWidget.id === $attrs.widget.id
             }"
         >
