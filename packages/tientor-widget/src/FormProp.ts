@@ -1,4 +1,4 @@
-import {ArcoFormPropsInterface} from "./types/formProps";
+import {ArcoFormPropsInterface, FormPropsInter} from "./types/formProps";
 
 // Arco 表单配置
 export const ArcoFormProp: ArcoFormPropsInterface = {
@@ -21,7 +21,7 @@ export const ArcoFormProp: ArcoFormPropsInterface = {
 }
 
 // 默认 Arco 表单配置
-export const FormProp: any = {
-    ...ArcoFormProp
+export const FormProp: FormPropsInter = {
+    arco: {...ArcoFormProp}
 }
 

@@ -15,12 +15,12 @@
         </a-tab-pane>
         <a-tab-pane key="FormSettings" title="表单设置" class="px-5 pb-4">
             <a-form
-                :model="formProp"
+                :model="formProp[ui]"
                 auto-label-width
                 size="medium"
                 label-align="left"
             >
-                <component is="TientorConfigArcoFormProp" :queryForm="formProp"/>
+                <component is="TientorConfigArcoFormProp" :queryForm="formProp[ui]"/>
                 <!--                <a-form-item label="标签的对齐方向">-->
                 <!--                    <a-radio-group type="button" default-value="beijing">-->
                 <!--                        <a-radio value="Beijing">Beijing</a-radio>-->
@@ -35,12 +35,13 @@
 </template>
 
 <script setup>
-import {useDesignerStore} from "@tientor/tientor-hooks";
+import {useConfigStore, useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'FormConfiguration'
 })
 
+const {ui} = toRefs(useConfigStore())
 const {formProp, currentWidget} = toRefs(useDesignerStore())
 </script>
 

@@ -1,15 +1,14 @@
 <template>
     <component
         :is="FormComponent"
-        v-bind="filterObject(formProp,formProps[ui])"
+        v-bind="formProp[ui]"
     >
         <slot/>
     </component>
 </template>
 
 <script setup>
-import {filterObject, getUiComponent, setUiComponent} from "../utils/utils.js";
-import formProps from "../config/formProps.js";
+import {getUiComponent, setUiComponent} from "../utils/utils.js";
 import {useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
