@@ -3,7 +3,6 @@
         :is="FormComponent"
         v-bind="filterObject(formProp,formProps[ui])"
     >
-        {{formProp}}
         <slot/>
     </component>
 </template>
