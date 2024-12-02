@@ -25,7 +25,7 @@
         <a-input v-model="queryForm._widgetProp[ui].placeholder" placeholder="请输入默认提示文字..."/>
     </a-form-item>
     <a-form-item label="最大文本长度：" field="maxLength">
-        <a-input-number v-model="queryForm._widgetProp[ui].maxLength" placeholder="请输入默认提示文字..."
+        <a-input-number v-model="queryForm._widgetProp[ui].maxLength" :min="0" placeholder="请输入默认提示文字..."
                         mode="button"/>
     </a-form-item>
     <a-form-item label="显示字数统计：" field="showWordLimit">

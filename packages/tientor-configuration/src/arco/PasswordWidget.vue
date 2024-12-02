@@ -33,6 +33,7 @@
             v-model="queryForm._widgetProp[ui].maxLength"
             placeholder="请输入默认提示文字..."
             mode="button"
+            :min="0"
         />
     </a-form-item>
     <a-form-item label="显示字数统计：" field="showWordLimit">
