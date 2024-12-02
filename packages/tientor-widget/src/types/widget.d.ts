@@ -8,6 +8,12 @@ export interface WidgetInterface {
         antv: boolean;
         arco: boolean;
     };
+    // 配置面板
+    _config: {
+        arco: string,
+        element?: string,
+        antv?: string
+    },
     _itemProps: {};
     _widgetProp: {};
 }
