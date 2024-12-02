@@ -21,7 +21,7 @@ const ArcoWidgetProps = {
 
 export const TextareaWidget: WidgetInterface = {
     id: '4d4fcb2e5e7e4f578b8fd015426cdf32',
-    name: '多行文本框',
+    name: '多行文本框-✔',
     icon: 'widget-textarea',
     tag: 'textarea',
     enabled: {

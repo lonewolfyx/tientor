@@ -29,7 +29,7 @@ const ArcoWidgetProps = {
 }
 export const NumberWidget: WidgetInterface = {
     id: 'dc7a6cdbaf8b41679d1d3a3f7d0c8599',
-    name: '数字输入框',
+    name: '数字输入框-✔',
     icon: 'widget-number',
     tag: 'number',
     enabled: {

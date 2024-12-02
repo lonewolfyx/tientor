@@ -24,7 +24,7 @@ const ArcoWidgetProps = {
 
 export const PasswordWidget: WidgetInterface = {
     id: 'e0b2862a2fd44eeb8eab562b843349f1',
-    name: '密码输入框',
+    name: '密码输入框-✔',
     icon: 'widget-password',
     tag: 'password',
     enabled: {
