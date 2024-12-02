@@ -33,7 +33,7 @@ defineOptions({
 const visible = ref(false)
 
 const {ui} = toRefs(useConfigStore())
-const {widgetList, currentWidget} = toRefs(useDesignerStore())
+const {widgetList} = toRefs(useDesignerStore())
 
 const changeStatus = () => {
     visible.value = !visible.value;

@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const SliderWidget: WidgetInterface = {
     name: '滑块',
@@ -9,6 +10,12 @@ export const SliderWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '滑块'
+            }
+        },
+    },
     _widgetProp: {}
 }

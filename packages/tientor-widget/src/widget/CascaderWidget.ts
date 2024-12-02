@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const CascaderWidget: WidgetInterface = {
     name: '级联选择器',
@@ -9,6 +10,12 @@ export const CascaderWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '级联选择器',
+            }
+        },
+    },
     _widgetProp: {}
 };

@@ -11,7 +11,8 @@ export const useDesignerStore = defineStore('designer', () => {
         formProp: FormProp,
         widgetList: [InputWidget],
         currentWidget: {...InputWidget},
-        first: {...InputWidget}
+        first: {...InputWidget},
+        selectIndex: 0
     })
 
     // 表单配置
@@ -42,6 +43,16 @@ export const useDesignerStore = defineStore('designer', () => {
         },
         set(value) {
             formConfig.value.currentWidget = value;
+        }
+    });
+
+    // 当前的选择组件的 index key
+    const selectIndex = computed({
+        get() {
+            return formConfig.value.selectIndex;
+        },
+        set(value) {
+            formConfig.value.selectIndex = value;
         }
     });
 
@@ -97,7 +108,8 @@ export const useDesignerStore = defineStore('designer', () => {
 
     // 更新当前选中的数据值
     const updateCurrentWidget = (widget) => {
-        formConfig.value.currentWidget = widget
+        formConfig.value.currentWidget = widget;
+        selectIndex.value = formConfig.value.widgetList.findIndex(item => item.id === widget.id)
         getFirstWidget()
     }
 
@@ -120,6 +132,7 @@ export const useDesignerStore = defineStore('designer', () => {
         formProp,
         widgetList,
         currentWidget,
+        selectIndex,
         firstWidget,
         clearWidget,
         addFormWidget,

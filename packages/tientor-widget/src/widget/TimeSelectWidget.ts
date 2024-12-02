@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const TimeSelectWidget: WidgetInterface = {
     name: '时间选择',
@@ -9,6 +10,12 @@ export const TimeSelectWidget: WidgetInterface = {
         antv: false,
         arco: false
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '时间选择'
+            }
+        },
+    },
     _widgetProp: {}
 }

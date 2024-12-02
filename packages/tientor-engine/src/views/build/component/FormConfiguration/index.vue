@@ -1,16 +1,19 @@
 <template>
-    <a-tabs default-active-key="FormSettings" lazy-load trigger="hover">
+    <a-tabs default-active-key="ComponentSettings" lazy-load>
         <a-tab-pane key="ComponentSettings" title="组件设置" class="px-5 pb-4">
-            {{ currentWidget }}
+            <!--            {{ widgetList?.[selectIndex] }}-->
             <a-form
-                :model="{}"
+                v-if="widgetList?.[selectIndex]?.['_itemProps']"
+                :model="widgetList?.[selectIndex]"
                 auto-label-width
                 size="medium"
                 label-align="left"
             >
-                <a-form-item label="标签文本">
-                    <a-input/>
-                </a-form-item>
+                <component
+                    is="TientorConfigArcoInput"
+                    :ui="ui"
+                    :queryForm="widgetList?.[selectIndex]"
+                />
             </a-form>
         </a-tab-pane>
         <a-tab-pane key="FormSettings" title="表单设置" class="px-5 pb-4">
@@ -42,7 +45,7 @@ defineOptions({
 })
 
 const {ui} = toRefs(useConfigStore())
-const {formProp, currentWidget} = toRefs(useDesignerStore())
+const {formProp, widgetList, currentWidget, selectIndex} = toRefs(useDesignerStore())
 </script>
 
 <style scoped lang="scss">

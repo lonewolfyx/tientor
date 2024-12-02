@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const ColorWidget: WidgetInterface = {
     name: '颜色选择器',
@@ -9,6 +10,12 @@ export const ColorWidget: WidgetInterface = {
         antv: false,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '颜色选择器'
+            }
+        },
+    },
     _widgetProp: {}
 }

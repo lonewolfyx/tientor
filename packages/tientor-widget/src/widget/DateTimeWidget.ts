@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const DateTimeWidget: WidgetInterface = {
     name: '日期时间选择器',
@@ -9,6 +10,12 @@ export const DateTimeWidget: WidgetInterface = {
         antv: false,
         arco: false
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '日期时间选择器'
+            }
+        },
+    },
     _widgetProp: {}
 }

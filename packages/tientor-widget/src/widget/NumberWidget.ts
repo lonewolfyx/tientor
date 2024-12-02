@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const NumberWidget: WidgetInterface = {
     name: '数字输入框',
@@ -9,6 +10,12 @@ export const NumberWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '数字输入框'
+            }
+        },
+    },
     _widgetProp: {}
 }

@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const RadioWidget: WidgetInterface = {
     name: '单选框',
@@ -9,6 +10,12 @@ export const RadioWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '单选框'
+            }
+        },
+    },
     _widgetProp: {}
 }

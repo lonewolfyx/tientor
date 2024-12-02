@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const SwitchWidget: WidgetInterface = {
     name: '开关',
@@ -9,6 +10,12 @@ export const SwitchWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '开关'
+            }
+        },
+    },
     _widgetProp: {}
 }

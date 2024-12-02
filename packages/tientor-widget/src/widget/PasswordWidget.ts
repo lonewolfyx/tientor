@@ -1,4 +1,5 @@
 import {WidgetInterface} from "../types/widget";
+import {ArcoItemProps} from "../item/arco";
 
 export const PasswordWidget: WidgetInterface = {
     name: '密码输入框',
@@ -9,6 +10,12 @@ export const PasswordWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
-    _itemProps: {},
+    _itemProps: {
+        arco: {
+            ...ArcoItemProps, ...{
+                label: '密码输入框'
+            }
+        },
+    },
     _widgetProp: {}
 }

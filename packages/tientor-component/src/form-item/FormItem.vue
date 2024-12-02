@@ -8,9 +8,9 @@
             :class="currentWidget?.id === $attrs.widget.id ? 'active' : ''"
             @click="updateCurrentWidget($attrs.widget)"
         >
-            <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps" v-if="$attrs.widget.enabled[ui]">
+            <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps[ui]" v-if="$attrs.widget.enabled[ui]">
                 <!-- 对应表单控件 -->
-                <component :is="FormWidgetComponent" v-bind="$attrs.widget._widgetProp"/>
+                <component :is="FormWidgetComponent" v-bind="$attrs.widget._widgetProp[ui]"/>
             </component>
         </div>
         <div
