@@ -59,9 +59,11 @@ import TientorConfigAntvTreeSelect from "./antv/TreeSelectWidget.vue";
 import TientorConfigAntvTree from "./antv/TreeWidget.vue";
 import TientorConfigAntvUpload from "./antv/UploadWidget.vue";
 import {widthInstall} from "./_utils/index.js";
+import TientorConfigArcoFormProp from "./arco/FormProp.vue";
 
 const component = {
     // Arco
+    TientorConfigArcoFormProp,
     TientorConfigArcoCascader,
     TientorConfigArcoCheckbox,
     TientorConfigArcoColor,
