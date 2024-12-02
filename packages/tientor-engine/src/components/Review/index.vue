@@ -11,7 +11,6 @@
         <TientorFormWrapper
             :ui="ui"
             class="render-wrapper"
-            :formProp="formProp"
         >
             <TientorFormItem
                 v-for="item in widgetList"
@@ -34,7 +33,7 @@ defineOptions({
 const visible = ref(false)
 
 const {ui} = toRefs(useConfigStore())
-const {formProp, widgetList, currentWidget} = toRefs(useDesignerStore())
+const {widgetList, currentWidget} = toRefs(useDesignerStore())
 
 const changeStatus = () => {
     visible.value = !visible.value;

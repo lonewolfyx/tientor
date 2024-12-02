@@ -2,7 +2,6 @@
     <TientorFormWrapper
         :ui="ui"
         class="render-wrapper"
-        :formProp="formProp"
         :class="device"
     >
         <VueDraggable
@@ -63,7 +62,7 @@ defineOptions({
     name: 'WidgetRender'
 })
 
-const {formProp, widgetList, currentWidget, updateCurrentWidget} = toRefs(useDesignerStore())
+const {widgetList, currentWidget, updateCurrentWidget} = toRefs(useDesignerStore())
 
 const {ui, device} = toRefs(useConfigStore())
 

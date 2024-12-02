@@ -3,6 +3,7 @@
         :is="FormComponent"
         v-bind="filterObject(formProp,formProps[ui])"
     >
+        {{formProp}}
         <slot/>
     </component>
 </template>
@@ -10,13 +11,15 @@
 <script setup>
 import {filterObject, getUiComponent, setUiComponent} from "../utils/utils.js";
 import formProps from "../config/formProps.js";
+import {useDesignerStore} from "@tientor/tientor-hooks";
 
 defineOptions({
     name: 'TientorFormWrapper'
 })
 
-const {ui, formProp} = defineProps(['ui', 'formProp'])
+const {ui} = defineProps(['ui'])
 
+const {formProp} = toRefs(useDesignerStore())
 // form 表单容器
 const FormComponent = shallowRef({})
 
