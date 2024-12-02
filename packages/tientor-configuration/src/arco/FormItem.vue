@@ -6,9 +6,6 @@
     <a-form-item label="隐藏标签：">
         <a-switch type="round" v-model="queryForm._itemProps[ui].hideLabel"/>
     </a-form-item>
-    <a-form-item label="隐藏标签：">
-        <a-switch type="round" v-model="queryForm._itemProps[ui].hideLabel"/>
-    </a-form-item>
     <a-form-item label="标签文本：" field="label">
         <a-input v-model="queryForm._itemProps[ui].label" placeholder="请输入默认的标签文本..."/>
     </a-form-item>

@@ -12,6 +12,9 @@
             <a-radio value="large">大</a-radio>
         </a-radio-group>
     </a-form-item>
+    <a-form-item label="允许清空输入框：" field="allowClear">
+        <a-switch type="round" v-model="queryForm._widgetProp[ui].allowClear"/>
+    </a-form-item>
     <a-form-item label="禁用组件：" field="disabled">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].disabled"/>
     </a-form-item>
