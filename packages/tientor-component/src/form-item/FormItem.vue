@@ -10,7 +10,11 @@
         >
             <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps[ui]" v-if="$attrs.widget.enabled[ui]">
                 <!-- 对应表单控件 -->
-                <component :is="FormWidgetComponent" v-bind="$attrs.widget._widgetProp[ui]"/>
+                <component
+                    :is="FormWidgetComponent"
+                    v-bind="$attrs.widget._widgetProp[ui]"
+                    v-model="$attrs.widget._widgetProp[ui]['defaultValue']"
+                />
             </component>
         </div>
         <div

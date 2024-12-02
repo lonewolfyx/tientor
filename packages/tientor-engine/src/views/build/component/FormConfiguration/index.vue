@@ -2,6 +2,7 @@
     <a-tabs default-active-key="ComponentSettings" lazy-load>
         <a-tab-pane key="ComponentSettings" title="组件设置" class="px-5 pb-4">
             <!--            {{ widgetList?.[selectIndex] }}-->
+            <!--            {{widgetList[selectIndex]}}-->
             <a-form
                 v-if="widgetList?.[selectIndex]?.['_itemProps']"
                 :model="widgetList?.[selectIndex]"
@@ -10,7 +11,7 @@
                 label-align="left"
             >
                 <component
-                    is="TientorConfigArcoInput"
+                    :is="currentWidget._config[ui]"
                     :ui="ui"
                     :queryForm="widgetList?.[selectIndex]"
                 />

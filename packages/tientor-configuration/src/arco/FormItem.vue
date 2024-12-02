@@ -1,4 +1,8 @@
 <template>
+    <DividerHeader title="表单项设置"/>
+    <a-form-item label="组件 ID：" field="help">
+        <a-input v-model="queryForm.id" disabled/>
+    </a-form-item>
     <a-form-item label="隐藏标签：">
         <a-switch type="round" v-model="queryForm._itemProps[ui].hideLabel"/>
     </a-form-item>
@@ -55,6 +59,8 @@
 </template>
 
 <script setup>
+import DividerHeader from "../components/DividerHeader.vue";
+
 defineOptions({
     name: 'TientorConfigArcoFormItem'
 });

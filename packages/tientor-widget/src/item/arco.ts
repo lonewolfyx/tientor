@@ -1,4 +1,19 @@
-export const ArcoItemProps = {
+export interface ArcoItemPropsInterface {
+    field: string;
+    label: string;
+    tooltip: string;
+    showColon: boolean;
+    disabled: boolean;
+    help: string;
+    extra: string;
+    required: boolean;
+    asteriskPosition: 'start' | 'end';
+    hideLabel: boolean;
+    hideAsterisk: boolean;
+    rules: Record<string, string[]>;
+}
+
+export const ArcoItemProps: ArcoItemPropsInterface = {
     // 表单元素的数据值
     field: '',
     // 标签文本
