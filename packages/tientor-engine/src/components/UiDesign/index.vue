@@ -33,18 +33,18 @@ defineOptions({
 })
 
 const uiDesign = reactive([
-    {
-        label: 'Element Plus',
-        value: 'element',
-        description: '来自于由饿了么团队开发的 Vue3 Ui 组件库',
-        checkbox: true
-    },
-    {
-        label: 'Ant Design Vue',
-        value: 'antv',
-        description: '来自于 Antd 社区团队开发的 Vue 版本组件库',
-        checkbox: false
-    },
+    // {
+    //     label: 'Element Plus',
+    //     value: 'element',
+    //     description: '来自于由饿了么团队开发的 Vue3 Ui 组件库',
+    //     checkbox: true
+    // },
+    // {
+    //     label: 'Ant Design Vue',
+    //     value: 'antv',
+    //     description: '来自于 Antd 社区团队开发的 Vue 版本组件库',
+    //     checkbox: false
+    // },
     {
         label: 'Arco Design Vue',
         value: 'arco',
