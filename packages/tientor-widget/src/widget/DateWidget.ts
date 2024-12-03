@@ -40,7 +40,7 @@ const ArcoWidgetProps = {
 
 export const DateWidget: WidgetInterface = {
     id: '18ded3989a544c16a4616860d83302c6',
-    name: '日期选择器',
+    name: '日期选择器-✔',
     icon: 'widget-date',
     tag: 'date',
     enabled: {
