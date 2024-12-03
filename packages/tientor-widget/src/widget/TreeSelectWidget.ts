@@ -10,6 +10,7 @@ export const TreeSelectWidget: WidgetInterface = {
         antv: true,
         arco: true
     },
+    _config: {},
     _itemProps: {
         arco: {
             ...ArcoItemProps, ...{

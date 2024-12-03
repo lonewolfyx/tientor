@@ -10,6 +10,7 @@ export const ColorWidget: WidgetInterface = {
         antv: false,
         arco: true
     },
+    _config: {},
     _itemProps: {
         arco: {
             ...ArcoItemProps, ...{

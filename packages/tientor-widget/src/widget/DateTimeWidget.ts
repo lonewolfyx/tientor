@@ -10,6 +10,7 @@ export const DateTimeWidget: WidgetInterface = {
         antv: false,
         arco: false
     },
+    _config: {},
     _itemProps: {
         arco: {
             ...ArcoItemProps, ...{
