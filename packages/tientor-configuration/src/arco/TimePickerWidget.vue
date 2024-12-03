@@ -1,4 +1,6 @@
 <template>
+    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>
+    <DividerHeader title="组件设置"/>
     <a-form-item label="类型：">
         <a-radio-group type="button" size="small" v-model="queryForm._widgetProp[ui].type" @change="typeChangeHandle">
             <a-radio value="time">时间</a-radio>
@@ -50,6 +52,9 @@
 </template>
 
 <script setup>
+import TientorConfigArcoFormItem from "./FormItem.vue";
+import DividerHeader from "../components/DividerHeader.vue";
+
 defineOptions({
     name: 'TientorConfigArcoTimePicker'
 })
