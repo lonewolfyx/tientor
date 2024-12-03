@@ -1,5 +1,5 @@
 <template>
-    <!--    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>-->
+    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>
     <DividerHeader title="组件设置"/>
     <a-form-item label="默认值：" field="defaultValue">
         <a-input-number
@@ -40,6 +40,7 @@
 
 <script setup>
 import DividerHeader from "../components/DividerHeader.vue";
+import TientorConfigArcoFormItem from "./FormItem.vue";
 
 defineOptions({
     name: 'TientorConfigArcoRate'
