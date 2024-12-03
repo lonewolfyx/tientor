@@ -67,6 +67,7 @@ export default {
         password: 'InputPassword',
         // 单选框
         radio: 'Radio',
+        radioGroup: 'RadioGroup',
         // 评分
         rate: 'Rate',
         // 选择器
