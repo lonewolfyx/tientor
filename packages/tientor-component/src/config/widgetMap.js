@@ -56,6 +56,11 @@ export default {
         // dateTime: 'DatePicker',
         // 日期选择器
         date: 'DatePicker',
+        month: 'MonthPicker',
+        year: 'YearPicker',
+        quarter: 'QuarterPicker',
+        week: 'WeekPicker',
+        range: 'RangePicker',
         // 数字输入框
         number: 'InputNumber',
         // 密码输入框

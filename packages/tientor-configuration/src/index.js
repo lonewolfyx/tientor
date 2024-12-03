@@ -21,7 +21,6 @@ import TientorConfigElementUpload from "./element/UploadWidget.vue";
 import TientorConfigArcoCascader from "./arco/CascaderWidget.vue";
 import TientorConfigArcoCheckbox from "./arco/CheckboxWidget.vue";
 import TientorConfigArcoColor from "./arco/ColorWidget.vue";
-import TientorConfigArcoDateTime from "./arco/DateTimeWidget.vue";
 import TientorConfigArcoDate from "./arco/DateWidget.vue";
 import TientorConfigArcoInput from "./arco/InputWidget.vue";
 import TientorConfigArcoNumber from "./arco/NumberWidget.vue";
@@ -67,7 +66,6 @@ const component = {
     TientorConfigArcoCascader,
     TientorConfigArcoCheckbox,
     TientorConfigArcoColor,
-    TientorConfigArcoDateTime,
     TientorConfigArcoDate,
     TientorConfigArcoInput,
     TientorConfigArcoNumber,
