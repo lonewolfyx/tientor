@@ -10,7 +10,7 @@ export interface WidgetInterface {
     };
     // 配置面板
     _config: {
-        arco: string,
+        arco?: string,
         element?: string,
         antv?: string
     },
