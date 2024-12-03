@@ -20,7 +20,7 @@ const ArcoWidgetProps: any = {
     color: ''
 }
 export const RateWidget: WidgetInterface = {
-    name: '评分',
+    name: '评分-✔',
     icon: 'widget-rate',
     tag: 'rate',
     enabled: {
