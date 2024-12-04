@@ -21,11 +21,11 @@
                     v-model="$attrs.widget._widgetProp[ui]['defaultValue']"
                     :key="$attrs.widget.id"
                 >
-                    <!--                    <template v-for="(value, name) in $attrs.widget._widgetProp[ui]['_slot']" #[name]="slotProps">-->
-                    <!--                        <slot :name="name">-->
-                    <!--                            {{ value }}-->
-                    <!--                        </slot>-->
-                    <!--                    </template>-->
+                    <template v-for="(value, name) in $attrs.widget._widgetProp[ui]['_slot']" #[name]="slotProps">
+                        <slot :name="name">
+                            {{ value }}
+                        </slot>
+                    </template>
                 </component>
             </component>
         </div>
@@ -83,10 +83,10 @@ const slots = computed(() => {
     .widget-item-body {
         @apply relative w-full h-auto overflow-hidden border border-dotted border-transparent rounded cursor-grab z-[31];
 
-        &::after {
-            @apply absolute inset-0 w-full h-full;
-            content: ' ';
-        }
+        //&::after {
+        //    @apply absolute inset-0 w-full h-full;
+        //    content: ' ';
+        //}
 
         &:hover {
             border-color: rgb(var(--primary-6));
