@@ -8,13 +8,21 @@
             :class="currentWidget?.id === $attrs.widget.id ? 'active' : ''"
             @click="updateCurrentWidget($attrs.widget)"
         >
-            <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps[ui]" v-if="$attrs.widget.enabled[ui]">
+            <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps[ui]" v-if="$attrs.widget.enabled[ui]"
+                       :key="$attrs.widget.id">
                 <!-- 对应表单控件 -->
                 <component
                     :is="FormWidgetComponent"
                     v-bind="$attrs.widget._widgetProp[ui]"
                     v-model="$attrs.widget._widgetProp[ui]['defaultValue']"
-                />
+                    :key="$attrs.widget.id"
+                >
+                    <!--                    <template v-for="(value, name) in $attrs.widget._widgetProp[ui]['_slot']" #[name]="slotProps">-->
+                    <!--                        <slot :name="name">-->
+                    <!--                            {{ value }}-->
+                    <!--                        </slot>-->
+                    <!--                    </template>-->
+                </component>
             </component>
         </div>
         <div
@@ -52,6 +60,15 @@ const FormWidgetComponent = computed(() => getUiComponent(widget?.tag));
 
 const {updateCurrentWidget, firstWidget, copyWidget, deleteWidget} = toRefs(useDesignerStore());
 
+const slots = computed(() => {
+})
+// const slots = computed(() => {
+//     const slots = {}
+//     forEach(widget._widgetProp[ui]['_slot'], (value, name) => {
+//         if (value) slots[name] = value
+//     })
+//     return slots
+// })
 
 </script>
 
@@ -62,10 +79,10 @@ const {updateCurrentWidget, firstWidget, copyWidget, deleteWidget} = toRefs(useD
     .widget-item-body {
         @apply relative w-full h-auto overflow-hidden border border-dotted border-transparent rounded cursor-grab z-[31];
 
-        &::after {
-            @apply absolute inset-0 w-full h-full;
-            content: ' ';
-        }
+        //&::after {
+        //    @apply absolute inset-0 w-full h-full;
+        //    content: ' ';
+        //}
 
         &:hover {
             border-color: rgb(var(--primary-6));

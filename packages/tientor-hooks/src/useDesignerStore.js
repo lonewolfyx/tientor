@@ -2,16 +2,19 @@ import {defineStore} from 'pinia';
 
 import {clone} from "radash";
 import {uuid} from "./utils/utils.js";
-import {FormProp, InputWidget} from "@tientor/tientor-widget";
+import {FormProp} from "@tientor/tientor-widget";
 
 export const useDesignerStore = defineStore('designer', () => {
 
     // 配置信息
     const formConfig = ref({
         formProp: FormProp,
-        widgetList: [InputWidget],
-        currentWidget: {...InputWidget},
-        first: {...InputWidget},
+        // widgetList: [RadioWidget],
+        widgetList: [],
+        // currentWidget: {...RadioWidget},
+        currentWidget: {},
+        // first: {...RadioWidget},
+        first: {},
         selectIndex: 0
     })
 
@@ -32,6 +35,7 @@ export const useDesignerStore = defineStore('designer', () => {
         },
         set(value) {
             console.log('gengx组件列表')
+            console.log('widgetList', value)
             formConfig.value.widgetList = value;
         }
     });
@@ -42,6 +46,7 @@ export const useDesignerStore = defineStore('designer', () => {
             return formConfig.value.currentWidget;
         },
         set(value) {
+            console.log('currentWidget', value)
             formConfig.value.currentWidget = value;
         }
     });
@@ -52,6 +57,7 @@ export const useDesignerStore = defineStore('designer', () => {
             return formConfig.value.selectIndex;
         },
         set(value) {
+            console.log('selectIndex', value)
             formConfig.value.selectIndex = value;
         }
     });
@@ -62,24 +68,24 @@ export const useDesignerStore = defineStore('designer', () => {
             return formConfig.value.first;
         },
         set(value) {
+            console.log('firstWidget', value)
             formConfig.value.first = value;
         }
     });
 
 
     // 添加组件
-    const addFormWidget = (widget) => {
-        const newWidget = cloneWidgetItem(widget)
+    const addFormWidget = (e) => {
+        console.log('新增加的组件', JSON.stringify(e))
+        const newWidget = cloneWidgetItem(e)
         formConfig.value.widgetList.push(newWidget)
         updateCurrentWidget(newWidget)
     }
 
     // 克隆表单项
     const cloneWidgetItem = (widget) => {
-        console.log('zhix')
-        console.log(widget)
-
         const newWidget = clone(widget)
+        console.log(JSON.stringify(widget))
         const id = uuid().split('-').join('')
         return {
             ...newWidget,
@@ -108,7 +114,7 @@ export const useDesignerStore = defineStore('designer', () => {
 
     // 更新当前选中的数据值
     const updateCurrentWidget = (widget) => {
-        formConfig.value.currentWidget = widget;
+        currentWidget.value = widget;
         selectIndex.value = formConfig.value.widgetList.findIndex(item => item.id === widget.id)
         getFirstWidget()
     }
@@ -124,7 +130,7 @@ export const useDesignerStore = defineStore('designer', () => {
         const index = formConfig.value.widgetList.findIndex(item => item.id === widget.id)
         console.log('index', index)
         formConfig.value.widgetList.splice(index + 1, 0, newWidget);
-        updateCurrentWidget(newWidget)
+        // updateCurrentWidget(newWidget)
     }
 
     return {

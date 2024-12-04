@@ -26,7 +26,6 @@
 
 import {VueDraggable} from "vue-draggable-plus";
 import DividerHeader from "@/components/DividerHeader/index.vue";
-import {clone} from 'radash'
 import DraggableItem from "@/views/build/component/Sidebar/DraggableItem.vue";
 import UiDesign from "@/components/UiDesign/index.vue";
 import {useDesignerStore} from "@tientor/tientor-hooks";
@@ -36,7 +35,7 @@ defineOptions({
     name: 'Sidebar'
 });
 
-const components = ref(clone(basicComponents))
+const components = basicComponents
 
 const {formConfig, cloneWidgetItem} = useDesignerStore()
 </script>

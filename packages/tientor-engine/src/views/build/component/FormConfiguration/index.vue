@@ -2,18 +2,19 @@
     <a-tabs default-active-key="ComponentSettings" lazy-load>
         <a-tab-pane key="ComponentSettings" title="组件设置" class="px-5 pb-4">
             <!--            {{ widgetList?.[selectIndex] }}-->
-            <!--            {{widgetList[selectIndex]}}-->
             <template v-if="widgetList?.[selectIndex]?.['_itemProps']">
                 <a-form
-                    :model="widgetList?.[selectIndex]"
+                    :model="widgetList[selectIndex]"
                     auto-label-width
                     size="medium"
                     label-align="left"
                 >
+                    {{ widgetList[selectIndex] }}
                     <component
                         :is="currentWidget._config[ui]"
                         :ui="ui"
-                        :queryForm="widgetList?.[selectIndex]"
+                        :queryForm="widgetList[selectIndex]"
+                        :key="currentWidget.id"
                     />
                 </a-form>
             </template>
