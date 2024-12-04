@@ -1,7 +1,5 @@
 import {defineStore} from 'pinia';
-
-import {construct, crush} from "radash";
-import {uuid} from "./utils/utils.js";
+import {deepClone, uuid} from "./utils/utils.js";
 import {FormProp} from "@tientor/tientor-widget";
 
 export const useDesignerStore = defineStore('designer', () => {
@@ -84,8 +82,7 @@ export const useDesignerStore = defineStore('designer', () => {
 
     // 克隆表单项
     const cloneWidgetItem = (widget) => {
-        const newWidget = construct(crush(widget))
-        console.log(JSON.stringify(widget))
+        const newWidget = deepClone(widget)
         const id = uuid().split('-').join('')
         return {
             ...newWidget,
