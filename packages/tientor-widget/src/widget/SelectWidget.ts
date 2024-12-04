@@ -101,7 +101,7 @@ const ArcoWidgetProps = {
 }
 export const SelectWidget: WidgetInterface = {
     id: '0a73a5ca095b4763b531bf71f54bdf18',
-    name: '选择器',
+    name: '选择器-✔',
     icon: 'widget-select',
     tag: 'select',
     enabled: {
