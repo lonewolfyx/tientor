@@ -50,6 +50,7 @@ export default {
         cascader: 'Cascader',
         // 多选框
         checkbox: 'Checkbox',
+        checkboxGroup: 'CheckboxGroup',
         // 颜色选择器
         color: 'ColorPicker',
         // 日期时间选择器

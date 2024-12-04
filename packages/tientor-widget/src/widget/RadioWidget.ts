@@ -19,7 +19,7 @@ const ArcoWidgetProps = {
     options: [],
     // 插槽
     _slot: {
-        default: ''
+        default: '单选框'
     }
 }
 
