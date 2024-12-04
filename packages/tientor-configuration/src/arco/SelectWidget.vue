@@ -4,14 +4,14 @@
     <a-form-item label="默认值：" field="defaultValue">
         <a-input type="round" v-model="queryForm._widgetProp[ui].defaultValue"/>
     </a-form-item>
-    <a-form-item label="基础数据：">
-        <a-button>
-            <template #icon>
-                <icon-edit/>
-            </template>
-            数据编辑
-        </a-button>
-    </a-form-item>
+<!--    <a-form-item label="基础数据：">-->
+<!--        <a-button>-->
+<!--            <template #icon>-->
+<!--                <icon-edit/>-->
+<!--            </template>-->
+<!--            数据编辑-->
+<!--        </a-button>-->
+<!--    </a-form-item>-->
     <a-form-item label="多选模式：" field="multiple">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].multiple"/>
     </a-form-item>

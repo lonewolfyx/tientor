@@ -1,4 +1,5 @@
 <template>
+    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>
     <DividerHeader title="组件设置"/>
     <a-form-item label="上传地址：" field="action">
         <a-input v-model="queryForm._widgetProp[ui].action" placeholder="请输入上传请求地址"/>
@@ -73,6 +74,7 @@
 
 <script setup>
 import DividerHeader from "../components/DividerHeader.vue";
+import TientorConfigArcoFormItem from "./FormItem.vue";
 
 defineOptions({
     name: 'TientorConfigArcoUpload'

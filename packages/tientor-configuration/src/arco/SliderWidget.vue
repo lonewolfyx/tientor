@@ -94,13 +94,13 @@ const marks = ref([])
 
 onMounted(() => {
     nextTick(() => {
-        Object.keys(queryForm._widgetProp[ui].marks).map(index => {
+        queryForm._widgetProp[ui].marks ? Object.keys(queryForm._widgetProp[ui].marks).map(index => {
             marks.value.push({
                 id: uuid(),
                 label: queryForm._widgetProp[ui].marks[index],
                 value: Number(index)
             })
-        })
+        }) : ''
     })
 })
 

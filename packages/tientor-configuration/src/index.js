@@ -32,7 +32,6 @@ import TientorConfigArcoSlider from "./arco/SliderWidget.vue";
 import TientorConfigArcoSwitch from "./arco/SwitchWidget.vue";
 import TientorConfigArcoTextarea from "./arco/TextareaWidget.vue";
 import TientorConfigArcoTimePicker from "./arco/TimePickerWidget.vue";
-import TientorConfigArcoTimeSelect from "./arco/TimeSelectWidget.vue";
 import TientorConfigArcoTransfer from "./arco/TransferWidget.vue";
 import TientorConfigArcoTreeSelect from "./arco/TreeSelectWidget.vue";
 import TientorConfigArcoTree from "./arco/TreeWidget.vue";
@@ -77,7 +76,6 @@ const component = {
     TientorConfigArcoSwitch,
     TientorConfigArcoTextarea,
     TientorConfigArcoTimePicker,
-    TientorConfigArcoTimeSelect,
     TientorConfigArcoTransfer,
     TientorConfigArcoTreeSelect,
     TientorConfigArcoTree,

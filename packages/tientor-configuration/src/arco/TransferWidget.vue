@@ -1,4 +1,6 @@
 <template>
+    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>
+    <DividerHeader title="组件设置"/>
     <a-form-item label="源选择框标题：" field="defaultValue">
         <a-input v-model="queryForm._widgetProp[ui].title[0]" placeholder="请输入默认标题..."/>
     </a-form-item>
@@ -23,10 +25,12 @@
 </template>
 
 <script setup>
+import TientorConfigArcoFormItem from "./FormItem.vue";
+import DividerHeader from "../components/DividerHeader.vue";
 
 defineOptions({
     name: 'TientorConfigArcoTransfer'
 })
-const {ui, queryForm, selectIndex} = defineProps(['ui', 'queryForm', 'selectIndex']);
 
+const {ui, queryForm, selectIndex} = defineProps(['ui', 'queryForm', 'selectIndex']);
 </script>

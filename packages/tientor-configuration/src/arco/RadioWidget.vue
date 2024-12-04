@@ -1,4 +1,5 @@
 <template>
+    <TientorConfigArcoFormItem :ui="ui" :queryForm="queryForm"/>
     <DividerHeader title="组件设置"/>
     <a-form-item label="单选框组：" field="group">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].group" @change="radioChangeHandle"/>
@@ -54,6 +55,7 @@
 
 <script setup>
 import DividerHeader from "../components/DividerHeader.vue";
+import TientorConfigArcoFormItem from "./FormItem.vue";
 
 defineOptions({
     name: 'TientorConfigArcoRadio'
