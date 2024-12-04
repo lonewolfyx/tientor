@@ -83,7 +83,7 @@
 </template>
 
 <script setup>
-import {clone} from "radash";
+import {construct, crush} from "radash";
 import TientorConfigArcoFormItem from "./FormItem.vue";
 import DividerHeader from "../components/DividerHeader.vue";
 
@@ -104,7 +104,7 @@ const dateTypesOptions = [
 ]
 
 // 范围选择器类型
-const rangeModeTypesOptions = clone(dateTypesOptions)
+const rangeModeTypesOptions = construct(crush(dateTypesOptions))
 
 // 弹出框位置
 const positionOptions = [

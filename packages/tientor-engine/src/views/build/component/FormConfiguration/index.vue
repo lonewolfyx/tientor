@@ -9,7 +9,7 @@
                     size="medium"
                     label-align="left"
                 >
-                    {{ widgetList[selectIndex] }}
+<!--                    {{ widgetList[selectIndex] }}-->
                     <component
                         :is="currentWidget._config[ui]"
                         :ui="ui"

@@ -8,8 +8,12 @@
             :class="currentWidget?.id === $attrs.widget.id ? 'active' : ''"
             @click="updateCurrentWidget($attrs.widget)"
         >
-            <component :is="FormItemComponent" v-bind="$attrs.widget._itemProps[ui]" v-if="$attrs.widget.enabled[ui]"
-                       :key="$attrs.widget.id">
+            <component
+                :is="FormItemComponent"
+                v-bind="$attrs.widget._itemProps[ui]"
+                v-if="$attrs.widget.enabled[ui]"
+                :key="$attrs.widget.id"
+            >
                 <!-- 对应表单控件 -->
                 <component
                     :is="FormWidgetComponent"
@@ -79,10 +83,10 @@ const slots = computed(() => {
     .widget-item-body {
         @apply relative w-full h-auto overflow-hidden border border-dotted border-transparent rounded cursor-grab z-[31];
 
-        //&::after {
-        //    @apply absolute inset-0 w-full h-full;
-        //    content: ' ';
-        //}
+        &::after {
+            @apply absolute inset-0 w-full h-full;
+            content: ' ';
+        }
 
         &:hover {
             border-color: rgb(var(--primary-6));
