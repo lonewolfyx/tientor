@@ -7,11 +7,11 @@ export const useDesignerStore = defineStore('designer', () => {
     // 配置信息
     const formConfig = ref({
         formProp: FormProp,
-        // widgetList: [RadioWidget],
+        // widgetList: [CascaderWidget],
         widgetList: [],
-        // currentWidget: {...RadioWidget},
+        // currentWidget: {...CascaderWidget},
         currentWidget: {},
-        // first: {...RadioWidget},
+        // first: {...CascaderWidget},
         first: {},
         selectIndex: 0
     })
