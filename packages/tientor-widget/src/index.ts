@@ -17,3 +17,4 @@ export {SelectWidget} from './widget/SelectWidget';
 export {UploadWidget} from './widget/UploadWidget';
 export {TransferWidget} from './widget/TransferWidget';
 export {CascaderWidget} from './widget/CascaderWidget';
+export {TreeSelectWidget} from './widget/TreeSelectWidget';
