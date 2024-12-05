@@ -44,7 +44,7 @@
     <a-form-item label="标签数量：" help="开启多选模式下选择的标签数量，0 则不限制">
         <a-input-number v-model="queryForm._widgetProp[ui].maxTagCount" :min="0" mode="button"/>
     </a-form-item>
-    <a-form-item label="记载中：" field="loading">
+    <a-form-item label="加载中：" field="loading">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].loading"/>
     </a-form-item>
     <a-form-item label="严格模式：" field="checkStrictly">

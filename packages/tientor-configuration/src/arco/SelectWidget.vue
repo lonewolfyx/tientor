@@ -43,7 +43,7 @@
         help="开启多选模式后，可设置的标签选择数量"
         :disabled="!queryForm._widgetProp[ui].multiple"
     >
-        <a-input-number v-model="queryForm._widgetProp[ui].maxTagCount" :min="0"/>
+        <a-input-number v-model="queryForm._widgetProp[ui].maxTagCount" :min="0" mode="button"/>
     </a-form-item>
     <a-form-item
         label="多选数量："
@@ -71,7 +71,7 @@
                  :disabled="!queryForm._widgetProp[ui].allowSearch">
         <a-input-number mode="button" v-model="queryForm._widgetProp[ui].searchDelay"/>
     </a-form-item>
-    <a-form-item label="是否加载中：" field="loading">
+    <a-form-item label="加载中：" field="loading">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].loading"/>
     </a-form-item>
     <a-form-item label="显示 Header：" help="空状态时是否显示 header">

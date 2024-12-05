@@ -4,7 +4,7 @@
     <a-form-item label="禁用组件：" field="disabled">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].disabled"/>
     </a-form-item>
-    <a-form-item label="加载中状态：" field="loading">
+    <a-form-item label="加载中：" field="loading">
         <a-switch type="round" v-model="queryForm._widgetProp[ui].loading"/>
     </a-form-item>
     <a-form-item label="开关类型：">
