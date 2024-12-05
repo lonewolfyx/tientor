@@ -1,6 +1,6 @@
 {
     "name": "@tientor/tientor-configuration",
-    "version": "1.0.24",
+    "version": "1.0.25",
     "private": true,
     "description": "Tientor 配置管理组件",
     "keywords": [],
