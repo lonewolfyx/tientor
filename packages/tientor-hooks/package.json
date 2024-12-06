@@ -4,15 +4,6 @@
     "private": true,
     "type": "module",
     "main": "./src/index.js",
-    "module": "./src/index.js",
-    "exports": {
-        "import": "./src/index.js",
-        "require": "./src/index.js"
-    },
-    "scripts": {
-        "dev": "vite build --watch",
-        "build": "vite build"
-    },
     "types": "./index.d.ts",
     "author": "世界上最靓的仔",
     "license": "MIT",
